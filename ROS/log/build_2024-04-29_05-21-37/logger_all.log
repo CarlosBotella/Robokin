@@ -1,0 +1,305 @@
+[3.509s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[3.509s] DEBUG:colcon:Parsed command line arguments: Namespace(allow_overriding=[], ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7fb4e26fa040>>, merge_install=False, metas=['./colcon.meta'], packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=2, paths=None, symlink_install=False, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7fb4e26fa040>, verb_name='build', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7fb4e22da460>)
+[3.655s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[3.656s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[3.656s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[3.656s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[3.656s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[3.656s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[3.656s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/eduard/Escritorio/Robokin/ROS'
+[3.656s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[3.656s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[3.657s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[3.657s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[3.657s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[3.657s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[3.657s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[3.657s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[3.657s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[3.672s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[3.672s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[3.672s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[3.672s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[3.672s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[3.673s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[3.673s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[3.673s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[3.673s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[3.673s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[3.673s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[3.673s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[3.674s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[3.674s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[3.674s] Level 1:colcon.colcon_core.package_identification:_identify(robokin) by extensions ['ignore', 'ignore_ament_install']
+[3.674s] Level 1:colcon.colcon_core.package_identification:_identify(robokin) by extension 'ignore'
+[3.674s] Level 1:colcon.colcon_core.package_identification:_identify(robokin) by extension 'ignore_ament_install'
+[3.674s] Level 1:colcon.colcon_core.package_identification:_identify(robokin) by extensions ['colcon_pkg']
+[3.674s] Level 1:colcon.colcon_core.package_identification:_identify(robokin) by extension 'colcon_pkg'
+[3.675s] Level 1:colcon.colcon_core.package_identification:_identify(robokin) by extensions ['colcon_meta']
+[3.675s] Level 1:colcon.colcon_core.package_identification:_identify(robokin) by extension 'colcon_meta'
+[3.675s] Level 1:colcon.colcon_core.package_identification:_identify(robokin) by extensions ['ros']
+[3.675s] Level 1:colcon.colcon_core.package_identification:_identify(robokin) by extension 'ros'
+[3.675s] Level 1:colcon.colcon_core.package_identification:_identify(robokin) by extensions ['cmake', 'python']
+[3.675s] Level 1:colcon.colcon_core.package_identification:_identify(robokin) by extension 'cmake'
+[3.675s] Level 1:colcon.colcon_core.package_identification:_identify(robokin) by extension 'python'
+[3.675s] Level 1:colcon.colcon_core.package_identification:_identify(robokin) by extensions ['python_setup_py']
+[3.675s] Level 1:colcon.colcon_core.package_identification:_identify(robokin) by extension 'python_setup_py'
+[3.675s] Level 1:colcon.colcon_core.package_identification:_identify(robokin/robokin) by extensions ['ignore', 'ignore_ament_install']
+[3.675s] Level 1:colcon.colcon_core.package_identification:_identify(robokin/robokin) by extension 'ignore'
+[3.676s] Level 1:colcon.colcon_core.package_identification:_identify(robokin/robokin) by extension 'ignore_ament_install'
+[3.676s] Level 1:colcon.colcon_core.package_identification:_identify(robokin/robokin) by extensions ['colcon_pkg']
+[3.676s] Level 1:colcon.colcon_core.package_identification:_identify(robokin/robokin) by extension 'colcon_pkg'
+[3.676s] Level 1:colcon.colcon_core.package_identification:_identify(robokin/robokin) by extensions ['colcon_meta']
+[3.676s] Level 1:colcon.colcon_core.package_identification:_identify(robokin/robokin) by extension 'colcon_meta'
+[3.676s] Level 1:colcon.colcon_core.package_identification:_identify(robokin/robokin) by extensions ['ros']
+[3.676s] Level 1:colcon.colcon_core.package_identification:_identify(robokin/robokin) by extension 'ros'
+[3.679s] DEBUG:colcon.colcon_core.package_identification:Package 'robokin/robokin' with type 'ros.ament_cmake' and name 'robokin'
+[3.679s] Level 1:colcon.colcon_core.package_identification:_identify(robokin/robokin_nav_system) by extensions ['ignore', 'ignore_ament_install']
+[3.680s] Level 1:colcon.colcon_core.package_identification:_identify(robokin/robokin_nav_system) by extension 'ignore'
+[3.680s] Level 1:colcon.colcon_core.package_identification:_identify(robokin/robokin_nav_system) by extension 'ignore_ament_install'
+[3.680s] Level 1:colcon.colcon_core.package_identification:_identify(robokin/robokin_nav_system) by extensions ['colcon_pkg']
+[3.680s] Level 1:colcon.colcon_core.package_identification:_identify(robokin/robokin_nav_system) by extension 'colcon_pkg'
+[3.680s] Level 1:colcon.colcon_core.package_identification:_identify(robokin/robokin_nav_system) by extensions ['colcon_meta']
+[3.680s] Level 1:colcon.colcon_core.package_identification:_identify(robokin/robokin_nav_system) by extension 'colcon_meta'
+[3.680s] Level 1:colcon.colcon_core.package_identification:_identify(robokin/robokin_nav_system) by extensions ['ros']
+[3.680s] Level 1:colcon.colcon_core.package_identification:_identify(robokin/robokin_nav_system) by extension 'ros'
+[3.681s] DEBUG:colcon.colcon_core.package_identification:Package 'robokin/robokin_nav_system' with type 'ros.ament_python' and name 'robokin_nav_system'
+[3.681s] Level 1:colcon.colcon_core.package_identification:_identify(robokin/robokin_publisher) by extensions ['ignore', 'ignore_ament_install']
+[3.681s] Level 1:colcon.colcon_core.package_identification:_identify(robokin/robokin_publisher) by extension 'ignore'
+[3.682s] Level 1:colcon.colcon_core.package_identification:_identify(robokin/robokin_publisher) by extension 'ignore_ament_install'
+[3.682s] Level 1:colcon.colcon_core.package_identification:_identify(robokin/robokin_publisher) by extensions ['colcon_pkg']
+[3.682s] Level 1:colcon.colcon_core.package_identification:_identify(robokin/robokin_publisher) by extension 'colcon_pkg'
+[3.682s] Level 1:colcon.colcon_core.package_identification:_identify(robokin/robokin_publisher) by extensions ['colcon_meta']
+[3.682s] Level 1:colcon.colcon_core.package_identification:_identify(robokin/robokin_publisher) by extension 'colcon_meta'
+[3.682s] Level 1:colcon.colcon_core.package_identification:_identify(robokin/robokin_publisher) by extensions ['ros']
+[3.682s] Level 1:colcon.colcon_core.package_identification:_identify(robokin/robokin_publisher) by extension 'ros'
+[3.683s] DEBUG:colcon.colcon_core.package_identification:Package 'robokin/robokin_publisher' with type 'ros.ament_python' and name 'robokin_publisher'
+[3.683s] Level 1:colcon.colcon_core.package_identification:_identify(robokin/robokin_world) by extensions ['ignore', 'ignore_ament_install']
+[3.683s] Level 1:colcon.colcon_core.package_identification:_identify(robokin/robokin_world) by extension 'ignore'
+[3.683s] Level 1:colcon.colcon_core.package_identification:_identify(robokin/robokin_world) by extension 'ignore_ament_install'
+[3.684s] Level 1:colcon.colcon_core.package_identification:_identify(robokin/robokin_world) by extensions ['colcon_pkg']
+[3.684s] Level 1:colcon.colcon_core.package_identification:_identify(robokin/robokin_world) by extension 'colcon_pkg'
+[3.684s] Level 1:colcon.colcon_core.package_identification:_identify(robokin/robokin_world) by extensions ['colcon_meta']
+[3.684s] Level 1:colcon.colcon_core.package_identification:_identify(robokin/robokin_world) by extension 'colcon_meta'
+[3.684s] Level 1:colcon.colcon_core.package_identification:_identify(robokin/robokin_world) by extensions ['ros']
+[3.684s] Level 1:colcon.colcon_core.package_identification:_identify(robokin/robokin_world) by extension 'ros'
+[3.685s] DEBUG:colcon.colcon_core.package_identification:Package 'robokin/robokin_world' with type 'ros.ament_cmake' and name 'robokin_world'
+[3.685s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[3.686s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[3.686s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[3.686s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[3.686s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[4.036s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[4.036s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[4.152s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 14 installed packages in /home/eduard/turtlebot3_ws/install
+[4.213s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 336 installed packages in /opt/ros/galactic
+[4.216s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[4.458s] Level 5:colcon.colcon_core.verb:set package 'robokin_nav_system' build argument 'cmake_args' from command line to 'None'
+[4.458s] Level 5:colcon.colcon_core.verb:set package 'robokin_nav_system' build argument 'cmake_target' from command line to 'None'
+[4.458s] Level 5:colcon.colcon_core.verb:set package 'robokin_nav_system' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[4.458s] Level 5:colcon.colcon_core.verb:set package 'robokin_nav_system' build argument 'cmake_clean_cache' from command line to 'False'
+[4.458s] Level 5:colcon.colcon_core.verb:set package 'robokin_nav_system' build argument 'cmake_clean_first' from command line to 'False'
+[4.458s] Level 5:colcon.colcon_core.verb:set package 'robokin_nav_system' build argument 'cmake_force_configure' from command line to 'False'
+[4.458s] Level 5:colcon.colcon_core.verb:set package 'robokin_nav_system' build argument 'ament_cmake_args' from command line to 'None'
+[4.458s] Level 5:colcon.colcon_core.verb:set package 'robokin_nav_system' build argument 'catkin_cmake_args' from command line to 'None'
+[4.458s] Level 5:colcon.colcon_core.verb:set package 'robokin_nav_system' build argument 'catkin_skip_building_tests' from command line to 'False'
+[4.458s] DEBUG:colcon.colcon_core.verb:Building package 'robokin_nav_system' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/eduard/Escritorio/Robokin/ROS/build/robokin_nav_system', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/eduard/Escritorio/Robokin/ROS/install/robokin_nav_system', 'merge_install': False, 'path': '/home/eduard/Escritorio/Robokin/ROS/robokin/robokin_nav_system', 'symlink_install': False, 'test_result_base': None}
+[4.539s] Level 5:colcon.colcon_core.verb:set package 'robokin_publisher' build argument 'cmake_args' from command line to 'None'
+[4.539s] Level 5:colcon.colcon_core.verb:set package 'robokin_publisher' build argument 'cmake_target' from command line to 'None'
+[4.539s] Level 5:colcon.colcon_core.verb:set package 'robokin_publisher' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[4.540s] Level 5:colcon.colcon_core.verb:set package 'robokin_publisher' build argument 'cmake_clean_cache' from command line to 'False'
+[4.540s] Level 5:colcon.colcon_core.verb:set package 'robokin_publisher' build argument 'cmake_clean_first' from command line to 'False'
+[4.540s] Level 5:colcon.colcon_core.verb:set package 'robokin_publisher' build argument 'cmake_force_configure' from command line to 'False'
+[4.540s] Level 5:colcon.colcon_core.verb:set package 'robokin_publisher' build argument 'ament_cmake_args' from command line to 'None'
+[4.540s] Level 5:colcon.colcon_core.verb:set package 'robokin_publisher' build argument 'catkin_cmake_args' from command line to 'None'
+[4.540s] Level 5:colcon.colcon_core.verb:set package 'robokin_publisher' build argument 'catkin_skip_building_tests' from command line to 'False'
+[4.540s] DEBUG:colcon.colcon_core.verb:Building package 'robokin_publisher' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/eduard/Escritorio/Robokin/ROS/build/robokin_publisher', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/eduard/Escritorio/Robokin/ROS/install/robokin_publisher', 'merge_install': False, 'path': '/home/eduard/Escritorio/Robokin/ROS/robokin/robokin_publisher', 'symlink_install': False, 'test_result_base': None}
+[4.600s] Level 5:colcon.colcon_core.verb:set package 'robokin_world' build argument 'cmake_args' from command line to 'None'
+[4.600s] Level 5:colcon.colcon_core.verb:set package 'robokin_world' build argument 'cmake_target' from command line to 'None'
+[4.600s] Level 5:colcon.colcon_core.verb:set package 'robokin_world' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[4.600s] Level 5:colcon.colcon_core.verb:set package 'robokin_world' build argument 'cmake_clean_cache' from command line to 'False'
+[4.600s] Level 5:colcon.colcon_core.verb:set package 'robokin_world' build argument 'cmake_clean_first' from command line to 'False'
+[4.600s] Level 5:colcon.colcon_core.verb:set package 'robokin_world' build argument 'cmake_force_configure' from command line to 'False'
+[4.600s] Level 5:colcon.colcon_core.verb:set package 'robokin_world' build argument 'ament_cmake_args' from command line to 'None'
+[4.600s] Level 5:colcon.colcon_core.verb:set package 'robokin_world' build argument 'catkin_cmake_args' from command line to 'None'
+[4.600s] Level 5:colcon.colcon_core.verb:set package 'robokin_world' build argument 'catkin_skip_building_tests' from command line to 'False'
+[4.601s] DEBUG:colcon.colcon_core.verb:Building package 'robokin_world' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/eduard/Escritorio/Robokin/ROS/build/robokin_world', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/eduard/Escritorio/Robokin/ROS/install/robokin_world', 'merge_install': False, 'path': '/home/eduard/Escritorio/Robokin/ROS/robokin/robokin_world', 'symlink_install': False, 'test_result_base': None}
+[4.660s] Level 5:colcon.colcon_core.verb:set package 'robokin' build argument 'cmake_args' from command line to 'None'
+[4.660s] Level 5:colcon.colcon_core.verb:set package 'robokin' build argument 'cmake_target' from command line to 'None'
+[4.660s] Level 5:colcon.colcon_core.verb:set package 'robokin' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[4.660s] Level 5:colcon.colcon_core.verb:set package 'robokin' build argument 'cmake_clean_cache' from command line to 'False'
+[4.660s] Level 5:colcon.colcon_core.verb:set package 'robokin' build argument 'cmake_clean_first' from command line to 'False'
+[4.660s] Level 5:colcon.colcon_core.verb:set package 'robokin' build argument 'cmake_force_configure' from command line to 'False'
+[4.661s] Level 5:colcon.colcon_core.verb:set package 'robokin' build argument 'ament_cmake_args' from command line to 'None'
+[4.661s] Level 5:colcon.colcon_core.verb:set package 'robokin' build argument 'catkin_cmake_args' from command line to 'None'
+[4.661s] Level 5:colcon.colcon_core.verb:set package 'robokin' build argument 'catkin_skip_building_tests' from command line to 'False'
+[4.661s] DEBUG:colcon.colcon_core.verb:Building package 'robokin' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/eduard/Escritorio/Robokin/ROS/build/robokin', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/eduard/Escritorio/Robokin/ROS/install/robokin', 'merge_install': False, 'path': '/home/eduard/Escritorio/Robokin/ROS/robokin/robokin', 'symlink_install': False, 'test_result_base': None}
+[4.721s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[4.783s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[4.783s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/eduard/Escritorio/Robokin/ROS/robokin/robokin_publisher' with build type 'ament_python'
+[4.784s] Level 1:colcon.colcon_core.shell:create_environment_hook('robokin_publisher', 'ament_prefix_path')
+[4.853s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[4.853s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/eduard/Escritorio/Robokin/ROS/install/robokin_publisher/share/robokin_publisher/hook/ament_prefix_path.ps1'
+[4.854s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/eduard/Escritorio/Robokin/ROS/install/robokin_publisher/share/robokin_publisher/hook/ament_prefix_path.dsv'
+[4.855s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/eduard/Escritorio/Robokin/ROS/install/robokin_publisher/share/robokin_publisher/hook/ament_prefix_path.sh'
+[4.928s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.928s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[5.122s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/eduard/Escritorio/Robokin/ROS/robokin/robokin_world' with build type 'ament_cmake'
+[5.122s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/eduard/Escritorio/Robokin/ROS/robokin/robokin_world'
+[5.190s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[5.190s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[5.719s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/eduard/Escritorio/Robokin/ROS/robokin/robokin_publisher'
+[5.778s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[5.778s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[5.969s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/eduard/Escritorio/Robokin/ROS/build/robokin_world': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/eduard/turtlebot3_ws/install/show_msg:/home/eduard/turtlebot3_ws/install/provide_map:/home/eduard/turtlebot3_ws/install/my_nav2_system:/home/eduard/turtlebot3_ws/install/my_first_subscriber:/home/eduard/turtlebot3_ws/install/my_first_service:/home/eduard/turtlebot3_ws/install/my_first_publisher:/home/eduard/turtlebot3_ws/install/my_first_node:/home/eduard/turtlebot3_ws/install/my_first_action:/opt/ros/galactic /usr/bin/cmake --build /home/eduard/Escritorio/Robokin/ROS/build/robokin_world -- -j2 -l2
+[6.095s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/eduard/Escritorio/Robokin/ROS/build/robokin_world' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/eduard/turtlebot3_ws/install/show_msg:/home/eduard/turtlebot3_ws/install/provide_map:/home/eduard/turtlebot3_ws/install/my_nav2_system:/home/eduard/turtlebot3_ws/install/my_first_subscriber:/home/eduard/turtlebot3_ws/install/my_first_service:/home/eduard/turtlebot3_ws/install/my_first_publisher:/home/eduard/turtlebot3_ws/install/my_first_node:/home/eduard/turtlebot3_ws/install/my_first_action:/opt/ros/galactic /usr/bin/cmake --build /home/eduard/Escritorio/Robokin/ROS/build/robokin_world -- -j2 -l2
+[6.142s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/eduard/Escritorio/Robokin/ROS/build/robokin_world': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/eduard/turtlebot3_ws/install/show_msg:/home/eduard/turtlebot3_ws/install/provide_map:/home/eduard/turtlebot3_ws/install/my_nav2_system:/home/eduard/turtlebot3_ws/install/my_first_subscriber:/home/eduard/turtlebot3_ws/install/my_first_service:/home/eduard/turtlebot3_ws/install/my_first_publisher:/home/eduard/turtlebot3_ws/install/my_first_node:/home/eduard/turtlebot3_ws/install/my_first_action:/opt/ros/galactic /usr/bin/cmake --install /home/eduard/Escritorio/Robokin/ROS/build/robokin_world
+[6.165s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robokin_world)
+[6.227s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/eduard/Escritorio/Robokin/ROS/build/robokin_world' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/eduard/turtlebot3_ws/install/show_msg:/home/eduard/turtlebot3_ws/install/provide_map:/home/eduard/turtlebot3_ws/install/my_nav2_system:/home/eduard/turtlebot3_ws/install/my_first_subscriber:/home/eduard/turtlebot3_ws/install/my_first_service:/home/eduard/turtlebot3_ws/install/my_first_publisher:/home/eduard/turtlebot3_ws/install/my_first_node:/home/eduard/turtlebot3_ws/install/my_first_action:/opt/ros/galactic /usr/bin/cmake --install /home/eduard/Escritorio/Robokin/ROS/build/robokin_world
+[6.236s] Level 1:colcon.colcon_core.environment:checking '/home/eduard/Escritorio/Robokin/ROS/install/robokin_world' for CMake module files
+[6.237s] Level 1:colcon.colcon_core.environment:checking '/home/eduard/Escritorio/Robokin/ROS/install/robokin_world' for CMake config files
+[6.238s] Level 1:colcon.colcon_core.shell:create_environment_hook('robokin_world', 'cmake_prefix_path')
+[6.301s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/eduard/Escritorio/Robokin/ROS/install/robokin_world/share/robokin_world/hook/cmake_prefix_path.ps1'
+[6.302s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/eduard/Escritorio/Robokin/ROS/install/robokin_world/share/robokin_world/hook/cmake_prefix_path.dsv'
+[6.302s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/eduard/Escritorio/Robokin/ROS/install/robokin_world/share/robokin_world/hook/cmake_prefix_path.sh'
+[6.303s] Level 1:colcon.colcon_core.environment:checking '/home/eduard/Escritorio/Robokin/ROS/install/robokin_world/lib'
+[6.304s] Level 1:colcon.colcon_core.environment:checking '/home/eduard/Escritorio/Robokin/ROS/install/robokin_world/bin'
+[6.304s] Level 1:colcon.colcon_core.environment:checking '/home/eduard/Escritorio/Robokin/ROS/install/robokin_world/lib/pkgconfig/robokin_world.pc'
+[6.304s] Level 1:colcon.colcon_core.environment:checking '/home/eduard/Escritorio/Robokin/ROS/install/robokin_world/lib/python3.8/site-packages'
+[6.304s] Level 1:colcon.colcon_core.environment:checking '/home/eduard/Escritorio/Robokin/ROS/install/robokin_world/bin'
+[6.366s] INFO:colcon.colcon_core.shell:Creating package script '/home/eduard/Escritorio/Robokin/ROS/install/robokin_world/share/robokin_world/package.ps1'
+[6.367s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/eduard/Escritorio/Robokin/ROS/install/robokin_world/share/robokin_world/package.dsv'
+[6.368s] INFO:colcon.colcon_core.shell:Creating package script '/home/eduard/Escritorio/Robokin/ROS/install/robokin_world/share/robokin_world/package.sh'
+[6.371s] INFO:colcon.colcon_core.shell:Creating package script '/home/eduard/Escritorio/Robokin/ROS/install/robokin_world/share/robokin_world/package.bash'
+[6.373s] INFO:colcon.colcon_core.shell:Creating package script '/home/eduard/Escritorio/Robokin/ROS/install/robokin_world/share/robokin_world/package.zsh'
+[6.375s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/eduard/Escritorio/Robokin/ROS/install/robokin_world/share/colcon-core/packages/robokin_world)
+[6.491s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robokin_world)
+[6.554s] Level 1:colcon.colcon_core.environment:checking '/home/eduard/Escritorio/Robokin/ROS/install/robokin_world' for CMake module files
+[6.555s] Level 1:colcon.colcon_core.environment:checking '/home/eduard/Escritorio/Robokin/ROS/install/robokin_world' for CMake config files
+[6.555s] Level 1:colcon.colcon_core.shell:create_environment_hook('robokin_world', 'cmake_prefix_path')
+[6.625s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/eduard/Escritorio/Robokin/ROS/install/robokin_world/share/robokin_world/hook/cmake_prefix_path.ps1'
+[6.626s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/eduard/Escritorio/Robokin/ROS/install/robokin_world/share/robokin_world/hook/cmake_prefix_path.dsv'
+[6.627s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/eduard/Escritorio/Robokin/ROS/install/robokin_world/share/robokin_world/hook/cmake_prefix_path.sh'
+[6.628s] Level 1:colcon.colcon_core.environment:checking '/home/eduard/Escritorio/Robokin/ROS/install/robokin_world/lib'
+[6.628s] Level 1:colcon.colcon_core.environment:checking '/home/eduard/Escritorio/Robokin/ROS/install/robokin_world/bin'
+[6.628s] Level 1:colcon.colcon_core.environment:checking '/home/eduard/Escritorio/Robokin/ROS/install/robokin_world/lib/pkgconfig/robokin_world.pc'
+[6.628s] Level 1:colcon.colcon_core.environment:checking '/home/eduard/Escritorio/Robokin/ROS/install/robokin_world/lib/python3.8/site-packages'
+[6.628s] Level 1:colcon.colcon_core.environment:checking '/home/eduard/Escritorio/Robokin/ROS/install/robokin_world/bin'
+[6.688s] INFO:colcon.colcon_core.shell:Creating package script '/home/eduard/Escritorio/Robokin/ROS/install/robokin_world/share/robokin_world/package.ps1'
+[6.688s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/eduard/Escritorio/Robokin/ROS/install/robokin_world/share/robokin_world/package.dsv'
+[6.689s] INFO:colcon.colcon_core.shell:Creating package script '/home/eduard/Escritorio/Robokin/ROS/install/robokin_world/share/robokin_world/package.sh'
+[6.690s] INFO:colcon.colcon_core.shell:Creating package script '/home/eduard/Escritorio/Robokin/ROS/install/robokin_world/share/robokin_world/package.bash'
+[6.691s] INFO:colcon.colcon_core.shell:Creating package script '/home/eduard/Escritorio/Robokin/ROS/install/robokin_world/share/robokin_world/package.zsh'
+[6.692s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/eduard/Escritorio/Robokin/ROS/install/robokin_world/share/colcon-core/packages/robokin_world)
+[6.693s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/eduard/Escritorio/Robokin/ROS/robokin/robokin_nav_system' with build type 'ament_python'
+[6.693s] Level 1:colcon.colcon_core.shell:create_environment_hook('robokin_nav_system', 'ament_prefix_path')
+[6.768s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/eduard/Escritorio/Robokin/ROS/install/robokin_nav_system/share/robokin_nav_system/hook/ament_prefix_path.ps1'
+[6.768s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/eduard/Escritorio/Robokin/ROS/install/robokin_nav_system/share/robokin_nav_system/hook/ament_prefix_path.dsv'
+[6.769s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/eduard/Escritorio/Robokin/ROS/install/robokin_nav_system/share/robokin_nav_system/hook/ament_prefix_path.sh'
+[6.838s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[6.838s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[7.025s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/eduard/Escritorio/Robokin/ROS/robokin/robokin_publisher': PYTHONPATH=/home/eduard/Escritorio/Robokin/ROS/build/robokin_publisher/prefix_override:/home/eduard/Escritorio/Robokin/ROS/install/robokin_publisher/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/robokin_publisher build --build-base /home/eduard/Escritorio/Robokin/ROS/build/robokin_publisher/build install --record /home/eduard/Escritorio/Robokin/ROS/build/robokin_publisher/install.log --single-version-externally-managed
+[7.368s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/eduard/Escritorio/Robokin/ROS/robokin/robokin_nav_system'
+[7.439s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[7.439s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[7.723s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/eduard/Escritorio/Robokin/ROS/robokin/robokin_publisher' returned '0': PYTHONPATH=/home/eduard/Escritorio/Robokin/ROS/build/robokin_publisher/prefix_override:/home/eduard/Escritorio/Robokin/ROS/install/robokin_publisher/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/robokin_publisher build --build-base /home/eduard/Escritorio/Robokin/ROS/build/robokin_publisher/build install --record /home/eduard/Escritorio/Robokin/ROS/build/robokin_publisher/install.log --single-version-externally-managed
+[7.829s] Level 1:colcon.colcon_core.environment:checking '/home/eduard/Escritorio/Robokin/ROS/install/robokin_publisher' for CMake module files
+[7.851s] Level 1:colcon.colcon_core.environment:checking '/home/eduard/Escritorio/Robokin/ROS/install/robokin_publisher' for CMake config files
+[7.851s] Level 1:colcon.colcon_core.environment:checking '/home/eduard/Escritorio/Robokin/ROS/install/robokin_publisher/lib'
+[7.852s] Level 1:colcon.colcon_core.environment:checking '/home/eduard/Escritorio/Robokin/ROS/install/robokin_publisher/bin'
+[7.852s] Level 1:colcon.colcon_core.environment:checking '/home/eduard/Escritorio/Robokin/ROS/install/robokin_publisher/lib/pkgconfig/robokin_publisher.pc'
+[7.852s] Level 1:colcon.colcon_core.environment:checking '/home/eduard/Escritorio/Robokin/ROS/install/robokin_publisher/lib/python3.8/site-packages'
+[7.853s] Level 1:colcon.colcon_core.shell:create_environment_hook('robokin_publisher', 'pythonpath')
+[7.938s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/eduard/Escritorio/Robokin/ROS/install/robokin_publisher/share/robokin_publisher/hook/pythonpath.ps1'
+[7.939s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/eduard/Escritorio/Robokin/ROS/install/robokin_publisher/share/robokin_publisher/hook/pythonpath.dsv'
+[7.941s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/eduard/Escritorio/Robokin/ROS/install/robokin_publisher/share/robokin_publisher/hook/pythonpath.sh'
+[7.943s] Level 1:colcon.colcon_core.environment:checking '/home/eduard/Escritorio/Robokin/ROS/install/robokin_publisher/bin'
+[7.943s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robokin_publisher)
+[8.024s] INFO:colcon.colcon_core.shell:Creating package script '/home/eduard/Escritorio/Robokin/ROS/install/robokin_publisher/share/robokin_publisher/package.ps1'
+[8.026s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/eduard/Escritorio/Robokin/ROS/install/robokin_publisher/share/robokin_publisher/package.dsv'
+[8.027s] INFO:colcon.colcon_core.shell:Creating package script '/home/eduard/Escritorio/Robokin/ROS/install/robokin_publisher/share/robokin_publisher/package.sh'
+[8.028s] INFO:colcon.colcon_core.shell:Creating package script '/home/eduard/Escritorio/Robokin/ROS/install/robokin_publisher/share/robokin_publisher/package.bash'
+[8.028s] INFO:colcon.colcon_core.shell:Creating package script '/home/eduard/Escritorio/Robokin/ROS/install/robokin_publisher/share/robokin_publisher/package.zsh'
+[8.029s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/eduard/Escritorio/Robokin/ROS/install/robokin_publisher/share/colcon-core/packages/robokin_publisher)
+[8.031s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/eduard/Escritorio/Robokin/ROS/robokin/robokin' with build type 'ament_cmake'
+[8.032s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/eduard/Escritorio/Robokin/ROS/robokin/robokin'
+[8.100s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[8.100s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[8.313s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/eduard/Escritorio/Robokin/ROS/build/robokin': AMENT_PREFIX_PATH=/home/eduard/Escritorio/Robokin/ROS/install/robokin_world:/home/eduard/Escritorio/Robokin/ROS/install/robokin_publisher:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/eduard/Escritorio/Robokin/ROS/install/robokin_world:/home/eduard/turtlebot3_ws/install/turtlebot3_simulations:/home/eduard/turtlebot3_ws/install/my_world:/home/eduard/turtlebot3_ws/install/turtlebot3_gazebo:/home/eduard/turtlebot3_ws/install/turtlebot3_fake_node:/home/eduard/turtlebot3_ws/install/package_name:/home/eduard/turtlebot3_ws/install/custom_interface:/home/eduard/turtlebot3_ws/install/show_msg:/home/eduard/turtlebot3_ws/install/provide_map:/home/eduard/turtlebot3_ws/install/my_nav2_system:/home/eduard/turtlebot3_ws/install/my_first_subscriber:/home/eduard/turtlebot3_ws/install/my_first_service:/home/eduard/turtlebot3_ws/install/my_first_publisher:/home/eduard/turtlebot3_ws/install/my_first_node:/home/eduard/turtlebot3_ws/install/my_first_action:/opt/ros/galactic PYTHONPATH=/home/eduard/Escritorio/Robokin/ROS/install/robokin_publisher/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /home/eduard/Escritorio/Robokin/ROS/robokin/robokin -DCMAKE_INSTALL_PREFIX=/home/eduard/Escritorio/Robokin/ROS/install/robokin
+[8.446s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/eduard/Escritorio/Robokin/ROS/robokin/robokin_nav_system': PYTHONPATH=/home/eduard/Escritorio/Robokin/ROS/build/robokin_nav_system/prefix_override:/home/eduard/Escritorio/Robokin/ROS/install/robokin_nav_system/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/robokin_nav_system build --build-base /home/eduard/Escritorio/Robokin/ROS/build/robokin_nav_system/build install --record /home/eduard/Escritorio/Robokin/ROS/build/robokin_nav_system/install.log --single-version-externally-managed
+[8.992s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/eduard/Escritorio/Robokin/ROS/robokin/robokin_nav_system' returned '0': PYTHONPATH=/home/eduard/Escritorio/Robokin/ROS/build/robokin_nav_system/prefix_override:/home/eduard/Escritorio/Robokin/ROS/install/robokin_nav_system/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/robokin_nav_system build --build-base /home/eduard/Escritorio/Robokin/ROS/build/robokin_nav_system/build install --record /home/eduard/Escritorio/Robokin/ROS/build/robokin_nav_system/install.log --single-version-externally-managed
+[9.037s] Level 1:colcon.colcon_core.environment:checking '/home/eduard/Escritorio/Robokin/ROS/install/robokin_nav_system' for CMake module files
+[9.039s] Level 1:colcon.colcon_core.environment:checking '/home/eduard/Escritorio/Robokin/ROS/install/robokin_nav_system' for CMake config files
+[9.039s] Level 1:colcon.colcon_core.environment:checking '/home/eduard/Escritorio/Robokin/ROS/install/robokin_nav_system/lib'
+[9.040s] Level 1:colcon.colcon_core.environment:checking '/home/eduard/Escritorio/Robokin/ROS/install/robokin_nav_system/bin'
+[9.040s] Level 1:colcon.colcon_core.environment:checking '/home/eduard/Escritorio/Robokin/ROS/install/robokin_nav_system/lib/pkgconfig/robokin_nav_system.pc'
+[9.041s] Level 1:colcon.colcon_core.environment:checking '/home/eduard/Escritorio/Robokin/ROS/install/robokin_nav_system/lib/python3.8/site-packages'
+[9.041s] Level 1:colcon.colcon_core.shell:create_environment_hook('robokin_nav_system', 'pythonpath')
+[9.103s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/eduard/Escritorio/Robokin/ROS/install/robokin_nav_system/share/robokin_nav_system/hook/pythonpath.ps1'
+[9.104s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/eduard/Escritorio/Robokin/ROS/install/robokin_nav_system/share/robokin_nav_system/hook/pythonpath.dsv'
+[9.105s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/eduard/Escritorio/Robokin/ROS/install/robokin_nav_system/share/robokin_nav_system/hook/pythonpath.sh'
+[9.106s] Level 1:colcon.colcon_core.environment:checking '/home/eduard/Escritorio/Robokin/ROS/install/robokin_nav_system/bin'
+[9.107s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robokin_nav_system)
+[9.170s] INFO:colcon.colcon_core.shell:Creating package script '/home/eduard/Escritorio/Robokin/ROS/install/robokin_nav_system/share/robokin_nav_system/package.ps1'
+[9.172s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/eduard/Escritorio/Robokin/ROS/install/robokin_nav_system/share/robokin_nav_system/package.dsv'
+[9.172s] INFO:colcon.colcon_core.shell:Creating package script '/home/eduard/Escritorio/Robokin/ROS/install/robokin_nav_system/share/robokin_nav_system/package.sh'
+[9.173s] INFO:colcon.colcon_core.shell:Creating package script '/home/eduard/Escritorio/Robokin/ROS/install/robokin_nav_system/share/robokin_nav_system/package.bash'
+[9.174s] INFO:colcon.colcon_core.shell:Creating package script '/home/eduard/Escritorio/Robokin/ROS/install/robokin_nav_system/share/robokin_nav_system/package.zsh'
+[9.175s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/eduard/Escritorio/Robokin/ROS/install/robokin_nav_system/share/colcon-core/packages/robokin_nav_system)
+[9.235s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/eduard/Escritorio/Robokin/ROS/build/robokin' returned '0': AMENT_PREFIX_PATH=/home/eduard/Escritorio/Robokin/ROS/install/robokin_world:/home/eduard/Escritorio/Robokin/ROS/install/robokin_publisher:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/eduard/Escritorio/Robokin/ROS/install/robokin_world:/home/eduard/turtlebot3_ws/install/turtlebot3_simulations:/home/eduard/turtlebot3_ws/install/my_world:/home/eduard/turtlebot3_ws/install/turtlebot3_gazebo:/home/eduard/turtlebot3_ws/install/turtlebot3_fake_node:/home/eduard/turtlebot3_ws/install/package_name:/home/eduard/turtlebot3_ws/install/custom_interface:/home/eduard/turtlebot3_ws/install/show_msg:/home/eduard/turtlebot3_ws/install/provide_map:/home/eduard/turtlebot3_ws/install/my_nav2_system:/home/eduard/turtlebot3_ws/install/my_first_subscriber:/home/eduard/turtlebot3_ws/install/my_first_service:/home/eduard/turtlebot3_ws/install/my_first_publisher:/home/eduard/turtlebot3_ws/install/my_first_node:/home/eduard/turtlebot3_ws/install/my_first_action:/opt/ros/galactic PYTHONPATH=/home/eduard/Escritorio/Robokin/ROS/install/robokin_publisher/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /home/eduard/Escritorio/Robokin/ROS/robokin/robokin -DCMAKE_INSTALL_PREFIX=/home/eduard/Escritorio/Robokin/ROS/install/robokin
+[9.239s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/eduard/Escritorio/Robokin/ROS/build/robokin': AMENT_PREFIX_PATH=/home/eduard/Escritorio/Robokin/ROS/install/robokin_world:/home/eduard/Escritorio/Robokin/ROS/install/robokin_publisher:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/eduard/Escritorio/Robokin/ROS/install/robokin_world:/home/eduard/turtlebot3_ws/install/turtlebot3_simulations:/home/eduard/turtlebot3_ws/install/my_world:/home/eduard/turtlebot3_ws/install/turtlebot3_gazebo:/home/eduard/turtlebot3_ws/install/turtlebot3_fake_node:/home/eduard/turtlebot3_ws/install/package_name:/home/eduard/turtlebot3_ws/install/custom_interface:/home/eduard/turtlebot3_ws/install/show_msg:/home/eduard/turtlebot3_ws/install/provide_map:/home/eduard/turtlebot3_ws/install/my_nav2_system:/home/eduard/turtlebot3_ws/install/my_first_subscriber:/home/eduard/turtlebot3_ws/install/my_first_service:/home/eduard/turtlebot3_ws/install/my_first_publisher:/home/eduard/turtlebot3_ws/install/my_first_node:/home/eduard/turtlebot3_ws/install/my_first_action:/opt/ros/galactic PYTHONPATH=/home/eduard/Escritorio/Robokin/ROS/install/robokin_publisher/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/eduard/Escritorio/Robokin/ROS/build/robokin -- -j2 -l2
+[9.283s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/eduard/Escritorio/Robokin/ROS/build/robokin' returned '0': AMENT_PREFIX_PATH=/home/eduard/Escritorio/Robokin/ROS/install/robokin_world:/home/eduard/Escritorio/Robokin/ROS/install/robokin_publisher:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/eduard/Escritorio/Robokin/ROS/install/robokin_world:/home/eduard/turtlebot3_ws/install/turtlebot3_simulations:/home/eduard/turtlebot3_ws/install/my_world:/home/eduard/turtlebot3_ws/install/turtlebot3_gazebo:/home/eduard/turtlebot3_ws/install/turtlebot3_fake_node:/home/eduard/turtlebot3_ws/install/package_name:/home/eduard/turtlebot3_ws/install/custom_interface:/home/eduard/turtlebot3_ws/install/show_msg:/home/eduard/turtlebot3_ws/install/provide_map:/home/eduard/turtlebot3_ws/install/my_nav2_system:/home/eduard/turtlebot3_ws/install/my_first_subscriber:/home/eduard/turtlebot3_ws/install/my_first_service:/home/eduard/turtlebot3_ws/install/my_first_publisher:/home/eduard/turtlebot3_ws/install/my_first_node:/home/eduard/turtlebot3_ws/install/my_first_action:/opt/ros/galactic PYTHONPATH=/home/eduard/Escritorio/Robokin/ROS/install/robokin_publisher/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/eduard/Escritorio/Robokin/ROS/build/robokin -- -j2 -l2
+[9.310s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/eduard/Escritorio/Robokin/ROS/build/robokin': AMENT_PREFIX_PATH=/home/eduard/Escritorio/Robokin/ROS/install/robokin_world:/home/eduard/Escritorio/Robokin/ROS/install/robokin_publisher:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/eduard/Escritorio/Robokin/ROS/install/robokin_world:/home/eduard/turtlebot3_ws/install/turtlebot3_simulations:/home/eduard/turtlebot3_ws/install/my_world:/home/eduard/turtlebot3_ws/install/turtlebot3_gazebo:/home/eduard/turtlebot3_ws/install/turtlebot3_fake_node:/home/eduard/turtlebot3_ws/install/package_name:/home/eduard/turtlebot3_ws/install/custom_interface:/home/eduard/turtlebot3_ws/install/show_msg:/home/eduard/turtlebot3_ws/install/provide_map:/home/eduard/turtlebot3_ws/install/my_nav2_system:/home/eduard/turtlebot3_ws/install/my_first_subscriber:/home/eduard/turtlebot3_ws/install/my_first_service:/home/eduard/turtlebot3_ws/install/my_first_publisher:/home/eduard/turtlebot3_ws/install/my_first_node:/home/eduard/turtlebot3_ws/install/my_first_action:/opt/ros/galactic PYTHONPATH=/home/eduard/Escritorio/Robokin/ROS/install/robokin_publisher/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/eduard/Escritorio/Robokin/ROS/build/robokin
+[9.327s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robokin)
+[9.350s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/eduard/Escritorio/Robokin/ROS/build/robokin' returned '0': AMENT_PREFIX_PATH=/home/eduard/Escritorio/Robokin/ROS/install/robokin_world:/home/eduard/Escritorio/Robokin/ROS/install/robokin_publisher:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/eduard/Escritorio/Robokin/ROS/install/robokin_world:/home/eduard/turtlebot3_ws/install/turtlebot3_simulations:/home/eduard/turtlebot3_ws/install/my_world:/home/eduard/turtlebot3_ws/install/turtlebot3_gazebo:/home/eduard/turtlebot3_ws/install/turtlebot3_fake_node:/home/eduard/turtlebot3_ws/install/package_name:/home/eduard/turtlebot3_ws/install/custom_interface:/home/eduard/turtlebot3_ws/install/show_msg:/home/eduard/turtlebot3_ws/install/provide_map:/home/eduard/turtlebot3_ws/install/my_nav2_system:/home/eduard/turtlebot3_ws/install/my_first_subscriber:/home/eduard/turtlebot3_ws/install/my_first_service:/home/eduard/turtlebot3_ws/install/my_first_publisher:/home/eduard/turtlebot3_ws/install/my_first_node:/home/eduard/turtlebot3_ws/install/my_first_action:/opt/ros/galactic PYTHONPATH=/home/eduard/Escritorio/Robokin/ROS/install/robokin_publisher/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/eduard/Escritorio/Robokin/ROS/build/robokin
+[9.390s] Level 1:colcon.colcon_core.environment:checking '/home/eduard/Escritorio/Robokin/ROS/install/robokin' for CMake module files
+[9.391s] Level 1:colcon.colcon_core.environment:checking '/home/eduard/Escritorio/Robokin/ROS/install/robokin' for CMake config files
+[9.392s] Level 1:colcon.colcon_core.shell:create_environment_hook('robokin', 'cmake_prefix_path')
+[9.451s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/eduard/Escritorio/Robokin/ROS/install/robokin/share/robokin/hook/cmake_prefix_path.ps1'
+[9.452s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/eduard/Escritorio/Robokin/ROS/install/robokin/share/robokin/hook/cmake_prefix_path.dsv'
+[9.452s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/eduard/Escritorio/Robokin/ROS/install/robokin/share/robokin/hook/cmake_prefix_path.sh'
+[9.453s] Level 1:colcon.colcon_core.environment:checking '/home/eduard/Escritorio/Robokin/ROS/install/robokin/bin'
+[9.453s] Level 1:colcon.colcon_core.environment:checking '/home/eduard/Escritorio/Robokin/ROS/install/robokin/lib/pkgconfig/robokin.pc'
+[9.453s] Level 1:colcon.colcon_core.environment:checking '/home/eduard/Escritorio/Robokin/ROS/install/robokin/lib/python3.8/site-packages'
+[9.454s] Level 1:colcon.colcon_core.environment:checking '/home/eduard/Escritorio/Robokin/ROS/install/robokin/bin'
+[9.547s] INFO:colcon.colcon_core.shell:Creating package script '/home/eduard/Escritorio/Robokin/ROS/install/robokin/share/robokin/package.ps1'
+[9.548s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/eduard/Escritorio/Robokin/ROS/install/robokin/share/robokin/package.dsv'
+[9.548s] INFO:colcon.colcon_core.shell:Creating package script '/home/eduard/Escritorio/Robokin/ROS/install/robokin/share/robokin/package.sh'
+[9.549s] INFO:colcon.colcon_core.shell:Creating package script '/home/eduard/Escritorio/Robokin/ROS/install/robokin/share/robokin/package.bash'
+[9.550s] INFO:colcon.colcon_core.shell:Creating package script '/home/eduard/Escritorio/Robokin/ROS/install/robokin/share/robokin/package.zsh'
+[9.550s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/eduard/Escritorio/Robokin/ROS/install/robokin/share/colcon-core/packages/robokin)
+[9.633s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robokin)
+[9.690s] Level 1:colcon.colcon_core.environment:checking '/home/eduard/Escritorio/Robokin/ROS/install/robokin' for CMake module files
+[9.691s] Level 1:colcon.colcon_core.environment:checking '/home/eduard/Escritorio/Robokin/ROS/install/robokin' for CMake config files
+[9.691s] Level 1:colcon.colcon_core.shell:create_environment_hook('robokin', 'cmake_prefix_path')
+[9.748s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/eduard/Escritorio/Robokin/ROS/install/robokin/share/robokin/hook/cmake_prefix_path.ps1'
+[9.750s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/eduard/Escritorio/Robokin/ROS/install/robokin/share/robokin/hook/cmake_prefix_path.dsv'
+[9.751s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/eduard/Escritorio/Robokin/ROS/install/robokin/share/robokin/hook/cmake_prefix_path.sh'
+[9.752s] Level 1:colcon.colcon_core.environment:checking '/home/eduard/Escritorio/Robokin/ROS/install/robokin/bin'
+[9.753s] Level 1:colcon.colcon_core.environment:checking '/home/eduard/Escritorio/Robokin/ROS/install/robokin/lib/pkgconfig/robokin.pc'
+[9.753s] Level 1:colcon.colcon_core.environment:checking '/home/eduard/Escritorio/Robokin/ROS/install/robokin/lib/python3.8/site-packages'
+[9.753s] Level 1:colcon.colcon_core.environment:checking '/home/eduard/Escritorio/Robokin/ROS/install/robokin/bin'
+[9.812s] INFO:colcon.colcon_core.shell:Creating package script '/home/eduard/Escritorio/Robokin/ROS/install/robokin/share/robokin/package.ps1'
+[9.813s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/eduard/Escritorio/Robokin/ROS/install/robokin/share/robokin/package.dsv'
+[9.814s] INFO:colcon.colcon_core.shell:Creating package script '/home/eduard/Escritorio/Robokin/ROS/install/robokin/share/robokin/package.sh'
+[9.815s] INFO:colcon.colcon_core.shell:Creating package script '/home/eduard/Escritorio/Robokin/ROS/install/robokin/share/robokin/package.bash'
+[9.816s] INFO:colcon.colcon_core.shell:Creating package script '/home/eduard/Escritorio/Robokin/ROS/install/robokin/share/robokin/package.zsh'
+[9.817s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/eduard/Escritorio/Robokin/ROS/install/robokin/share/colcon-core/packages/robokin)
+[9.819s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[9.819s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[9.819s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[9.819s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[9.887s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[9.888s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[9.888s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[9.914s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[9.975s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/eduard/Escritorio/Robokin/ROS/install/local_setup.ps1'
+[9.976s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/eduard/Escritorio/Robokin/ROS/install/_local_setup_util_ps1.py'
+[9.981s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/eduard/Escritorio/Robokin/ROS/install/setup.ps1'
+[10.050s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/eduard/Escritorio/Robokin/ROS/install/local_setup.sh'
+[10.052s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/eduard/Escritorio/Robokin/ROS/install/_local_setup_util_sh.py'
+[10.053s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/eduard/Escritorio/Robokin/ROS/install/setup.sh'
+[10.120s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/eduard/Escritorio/Robokin/ROS/install/local_setup.bash'
+[10.121s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/eduard/Escritorio/Robokin/ROS/install/setup.bash'
+[10.183s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/eduard/Escritorio/Robokin/ROS/install/local_setup.zsh'
+[10.184s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/eduard/Escritorio/Robokin/ROS/install/setup.zsh'

@@ -1,0 +1,6 @@
+CMake Error at cmake_install.cmake:70 (file):
+  file INSTALL cannot find
+  "/home/eduard/Escritorio/Robokin/ROS/robokin/robokin_world/include": No
+  such file or directory.
+
+

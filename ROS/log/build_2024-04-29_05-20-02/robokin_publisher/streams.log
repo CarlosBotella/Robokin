@@ -1,0 +1,38 @@
+[1.969s] Invoking command in '/home/eduard/Escritorio/Robokin/ROS/robokin/robokin_publisher': PYTHONPATH=/home/eduard/Escritorio/Robokin/ROS/build/robokin_publisher/prefix_override:/home/eduard/Escritorio/Robokin/ROS/install/robokin_publisher/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/robokin_publisher build --build-base /home/eduard/Escritorio/Robokin/ROS/build/robokin_publisher/build install --record /home/eduard/Escritorio/Robokin/ROS/build/robokin_publisher/install.log --single-version-externally-managed
+[2.294s] running egg_info
+[2.295s] creating ../../build/robokin_publisher/robokin_publisher.egg-info
+[2.296s] writing ../../build/robokin_publisher/robokin_publisher.egg-info/PKG-INFO
+[2.297s] writing dependency_links to ../../build/robokin_publisher/robokin_publisher.egg-info/dependency_links.txt
+[2.298s] writing entry points to ../../build/robokin_publisher/robokin_publisher.egg-info/entry_points.txt
+[2.298s] writing requirements to ../../build/robokin_publisher/robokin_publisher.egg-info/requires.txt
+[2.299s] writing top-level names to ../../build/robokin_publisher/robokin_publisher.egg-info/top_level.txt
+[2.303s] writing manifest file '../../build/robokin_publisher/robokin_publisher.egg-info/SOURCES.txt'
+[2.354s] reading manifest file '../../build/robokin_publisher/robokin_publisher.egg-info/SOURCES.txt'
+[2.356s] writing manifest file '../../build/robokin_publisher/robokin_publisher.egg-info/SOURCES.txt'
+[2.357s] running build
+[2.357s] running build_py
+[2.358s] creating /home/eduard/Escritorio/Robokin/ROS/build/robokin_publisher/build
+[2.358s] creating /home/eduard/Escritorio/Robokin/ROS/build/robokin_publisher/build/lib
+[2.359s] creating /home/eduard/Escritorio/Robokin/ROS/build/robokin_publisher/build/lib/robokin_publisher
+[2.359s] copying robokin_publisher/__init__.py -> /home/eduard/Escritorio/Robokin/ROS/build/robokin_publisher/build/lib/robokin_publisher
+[2.359s] copying robokin_publisher/simple_publisher.py -> /home/eduard/Escritorio/Robokin/ROS/build/robokin_publisher/build/lib/robokin_publisher
+[2.360s] running install
+[2.363s] running install_lib
+[2.366s] creating /home/eduard/Escritorio/Robokin/ROS/install/robokin_publisher/lib/python3.8/site-packages/robokin_publisher
+[2.367s] copying /home/eduard/Escritorio/Robokin/ROS/build/robokin_publisher/build/lib/robokin_publisher/__init__.py -> /home/eduard/Escritorio/Robokin/ROS/install/robokin_publisher/lib/python3.8/site-packages/robokin_publisher
+[2.368s] copying /home/eduard/Escritorio/Robokin/ROS/build/robokin_publisher/build/lib/robokin_publisher/simple_publisher.py -> /home/eduard/Escritorio/Robokin/ROS/install/robokin_publisher/lib/python3.8/site-packages/robokin_publisher
+[2.369s] byte-compiling /home/eduard/Escritorio/Robokin/ROS/install/robokin_publisher/lib/python3.8/site-packages/robokin_publisher/__init__.py to __init__.cpython-38.pyc
+[2.373s] byte-compiling /home/eduard/Escritorio/Robokin/ROS/install/robokin_publisher/lib/python3.8/site-packages/robokin_publisher/simple_publisher.py to simple_publisher.cpython-38.pyc
+[2.374s] running install_data
+[2.376s] creating /home/eduard/Escritorio/Robokin/ROS/install/robokin_publisher/share/ament_index
+[2.376s] creating /home/eduard/Escritorio/Robokin/ROS/install/robokin_publisher/share/ament_index/resource_index
+[2.377s] creating /home/eduard/Escritorio/Robokin/ROS/install/robokin_publisher/share/ament_index/resource_index/packages
+[2.378s] copying resource/robokin_publisher -> /home/eduard/Escritorio/Robokin/ROS/install/robokin_publisher/share/ament_index/resource_index/packages
+[2.378s] copying package.xml -> /home/eduard/Escritorio/Robokin/ROS/install/robokin_publisher/share/robokin_publisher
+[2.379s] copying launch/my_first_publisher.launch.py -> /home/eduard/Escritorio/Robokin/ROS/install/robokin_publisher/share/robokin_publisher
+[2.380s] running install_egg_info
+[2.383s] Copying ../../build/robokin_publisher/robokin_publisher.egg-info to /home/eduard/Escritorio/Robokin/ROS/install/robokin_publisher/lib/python3.8/site-packages/robokin_publisher-0.0.0-py3.8.egg-info
+[2.386s] running install_scripts
+[2.417s] Installing simple_publisher script to /home/eduard/Escritorio/Robokin/ROS/install/robokin_publisher/lib/robokin_publisher
+[2.418s] writing list of installed files to '/home/eduard/Escritorio/Robokin/ROS/build/robokin_publisher/install.log'
+[2.478s] Invoked command in '/home/eduard/Escritorio/Robokin/ROS/robokin/robokin_publisher' returned '0': PYTHONPATH=/home/eduard/Escritorio/Robokin/ROS/build/robokin_publisher/prefix_override:/home/eduard/Escritorio/Robokin/ROS/install/robokin_publisher/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/robokin_publisher build --build-base /home/eduard/Escritorio/Robokin/ROS/build/robokin_publisher/build install --record /home/eduard/Escritorio/Robokin/ROS/build/robokin_publisher/install.log --single-version-externally-managed
