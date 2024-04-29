@@ -1,0 +1,55 @@
+[1.659s] Invoking command in '/home/eduard/Escritorio/Robokin/ROS/robokin/robokin_nav_system': PYTHONPATH=/home/eduard/Escritorio/Robokin/ROS/build/robokin_nav_system/prefix_override:/home/eduard/Escritorio/Robokin/ROS/install/robokin_nav_system/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/robokin_nav_system build --build-base /home/eduard/Escritorio/Robokin/ROS/build/robokin_nav_system/build install --record /home/eduard/Escritorio/Robokin/ROS/build/robokin_nav_system/install.log --single-version-externally-managed
+[2.014s] running egg_info
+[2.016s] creating ../../build/robokin_nav_system/robokin_nav_system.egg-info
+[2.017s] writing ../../build/robokin_nav_system/robokin_nav_system.egg-info/PKG-INFO
+[2.025s] writing dependency_links to ../../build/robokin_nav_system/robokin_nav_system.egg-info/dependency_links.txt
+[2.029s] writing entry points to ../../build/robokin_nav_system/robokin_nav_system.egg-info/entry_points.txt
+[2.029s] writing requirements to ../../build/robokin_nav_system/robokin_nav_system.egg-info/requires.txt
+[2.030s] writing top-level names to ../../build/robokin_nav_system/robokin_nav_system.egg-info/top_level.txt
+[2.037s] writing manifest file '../../build/robokin_nav_system/robokin_nav_system.egg-info/SOURCES.txt'
+[2.104s] reading manifest file '../../build/robokin_nav_system/robokin_nav_system.egg-info/SOURCES.txt'
+[2.107s] writing manifest file '../../build/robokin_nav_system/robokin_nav_system.egg-info/SOURCES.txt'
+[2.107s] running build
+[2.107s] running build_py
+[2.107s] creating /home/eduard/Escritorio/Robokin/ROS/build/robokin_nav_system/build
+[2.107s] creating /home/eduard/Escritorio/Robokin/ROS/build/robokin_nav_system/build/lib
+[2.108s] creating /home/eduard/Escritorio/Robokin/ROS/build/robokin_nav_system/build/lib/robokin_nav_system
+[2.108s] copying robokin_nav_system/initial_pose_pub.py -> /home/eduard/Escritorio/Robokin/ROS/build/robokin_nav_system/build/lib/robokin_nav_system
+[2.108s] copying robokin_nav_system/navigate_to_pose.py -> /home/eduard/Escritorio/Robokin/ROS/build/robokin_nav_system/build/lib/robokin_nav_system
+[2.108s] copying robokin_nav_system/__init__.py -> /home/eduard/Escritorio/Robokin/ROS/build/robokin_nav_system/build/lib/robokin_nav_system
+[2.108s] copying robokin_nav_system/my_waypoint_follower.py -> /home/eduard/Escritorio/Robokin/ROS/build/robokin_nav_system/build/lib/robokin_nav_system
+[2.108s] running install
+[2.109s] running install_lib
+[2.111s] creating /home/eduard/Escritorio/Robokin/ROS/install/robokin_nav_system/lib/python3.8/site-packages/robokin_nav_system
+[2.111s] copying /home/eduard/Escritorio/Robokin/ROS/build/robokin_nav_system/build/lib/robokin_nav_system/initial_pose_pub.py -> /home/eduard/Escritorio/Robokin/ROS/install/robokin_nav_system/lib/python3.8/site-packages/robokin_nav_system
+[2.112s] copying /home/eduard/Escritorio/Robokin/ROS/build/robokin_nav_system/build/lib/robokin_nav_system/navigate_to_pose.py -> /home/eduard/Escritorio/Robokin/ROS/install/robokin_nav_system/lib/python3.8/site-packages/robokin_nav_system
+[2.114s] copying /home/eduard/Escritorio/Robokin/ROS/build/robokin_nav_system/build/lib/robokin_nav_system/__init__.py -> /home/eduard/Escritorio/Robokin/ROS/install/robokin_nav_system/lib/python3.8/site-packages/robokin_nav_system
+[2.114s] copying /home/eduard/Escritorio/Robokin/ROS/build/robokin_nav_system/build/lib/robokin_nav_system/my_waypoint_follower.py -> /home/eduard/Escritorio/Robokin/ROS/install/robokin_nav_system/lib/python3.8/site-packages/robokin_nav_system
+[2.114s] byte-compiling /home/eduard/Escritorio/Robokin/ROS/install/robokin_nav_system/lib/python3.8/site-packages/robokin_nav_system/initial_pose_pub.py to initial_pose_pub.cpython-38.pyc
+[2.119s] byte-compiling /home/eduard/Escritorio/Robokin/ROS/install/robokin_nav_system/lib/python3.8/site-packages/robokin_nav_system/navigate_to_pose.py to navigate_to_pose.cpython-38.pyc
+[2.119s] byte-compiling /home/eduard/Escritorio/Robokin/ROS/install/robokin_nav_system/lib/python3.8/site-packages/robokin_nav_system/__init__.py to __init__.cpython-38.pyc
+[2.119s] byte-compiling /home/eduard/Escritorio/Robokin/ROS/install/robokin_nav_system/lib/python3.8/site-packages/robokin_nav_system/my_waypoint_follower.py to my_waypoint_follower.cpython-38.pyc
+[2.119s] running install_data
+[2.120s] creating /home/eduard/Escritorio/Robokin/ROS/install/robokin_nav_system/share/ament_index
+[2.120s] creating /home/eduard/Escritorio/Robokin/ROS/install/robokin_nav_system/share/ament_index/resource_index
+[2.120s] creating /home/eduard/Escritorio/Robokin/ROS/install/robokin_nav_system/share/ament_index/resource_index/packages
+[2.120s] copying resource/robokin_nav_system -> /home/eduard/Escritorio/Robokin/ROS/install/robokin_nav_system/share/ament_index/resource_index/packages
+[2.121s] copying package.xml -> /home/eduard/Escritorio/Robokin/ROS/install/robokin_nav_system/share/robokin_nav_system
+[2.121s] creating /home/eduard/Escritorio/Robokin/ROS/install/robokin_nav_system/share/robokin_nav_system/config
+[2.121s] copying config/cafe.pgm -> /home/eduard/Escritorio/Robokin/ROS/install/robokin_nav_system/share/robokin_nav_system/config
+[2.126s] copying config/my_nav2_params.yaml -> /home/eduard/Escritorio/Robokin/ROS/install/robokin_nav_system/share/robokin_nav_system/config
+[2.126s] copying config/cafe.yaml -> /home/eduard/Escritorio/Robokin/ROS/install/robokin_nav_system/share/robokin_nav_system/config
+[2.126s] copying config/my_slam.rviz -> /home/eduard/Escritorio/Robokin/ROS/install/robokin_nav_system/share/robokin_nav_system/config
+[2.126s] creating /home/eduard/Escritorio/Robokin/ROS/install/robokin_nav_system/share/robokin_nav_system/launch
+[2.126s] copying launch/my_nav2_system.launch.py -> /home/eduard/Escritorio/Robokin/ROS/install/robokin_nav_system/share/robokin_nav_system/launch
+[2.126s] copying launch/my_nav2_waypoints_follower.launch.py -> /home/eduard/Escritorio/Robokin/ROS/install/robokin_nav_system/share/robokin_nav_system/launch
+[2.127s] copying launch/my_tb3_sim_nav2.launch.py -> /home/eduard/Escritorio/Robokin/ROS/install/robokin_nav_system/share/robokin_nav_system/launch
+[2.127s] copying config/navigate_to_pose_w_replanning_and_recovery.xml -> /home/eduard/Escritorio/Robokin/ROS/install/robokin_nav_system/share/robokin_nav_system/config
+[2.128s] running install_egg_info
+[2.132s] Copying ../../build/robokin_nav_system/robokin_nav_system.egg-info to /home/eduard/Escritorio/Robokin/ROS/install/robokin_nav_system/lib/python3.8/site-packages/robokin_nav_system-0.0.0-py3.8.egg-info
+[2.136s] running install_scripts
+[2.173s] Installing initial_pose_pub script to /home/eduard/Escritorio/Robokin/ROS/install/robokin_nav_system/lib/robokin_nav_system
+[2.175s] Installing my_waypoints_follower script to /home/eduard/Escritorio/Robokin/ROS/install/robokin_nav_system/lib/robokin_nav_system
+[2.186s] Installing navigate_to_pose script to /home/eduard/Escritorio/Robokin/ROS/install/robokin_nav_system/lib/robokin_nav_system
+[2.189s] writing list of installed files to '/home/eduard/Escritorio/Robokin/ROS/build/robokin_nav_system/install.log'
+[2.281s] Invoked command in '/home/eduard/Escritorio/Robokin/ROS/robokin/robokin_nav_system' returned '0': PYTHONPATH=/home/eduard/Escritorio/Robokin/ROS/build/robokin_nav_system/prefix_override:/home/eduard/Escritorio/Robokin/ROS/install/robokin_nav_system/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/robokin_nav_system build --build-base /home/eduard/Escritorio/Robokin/ROS/build/robokin_nav_system/build install --record /home/eduard/Escritorio/Robokin/ROS/build/robokin_nav_system/install.log --single-version-externally-managed

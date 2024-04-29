@@ -1,0 +1,4 @@
+source;share/robokin/local_setup.bash
+source;share/robokin/local_setup.dsv
+source;share/robokin/local_setup.sh
+source;share/robokin/local_setup.zsh

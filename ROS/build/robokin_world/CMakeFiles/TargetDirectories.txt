@@ -1,0 +1,10 @@
+/home/eduard/Escritorio/Robokin/ROS/build/robokin_world/CMakeFiles/install/strip.dir
+/home/eduard/Escritorio/Robokin/ROS/build/robokin_world/CMakeFiles/install/local.dir
+/home/eduard/Escritorio/Robokin/ROS/build/robokin_world/CMakeFiles/edit_cache.dir
+/home/eduard/Escritorio/Robokin/ROS/build/robokin_world/CMakeFiles/test.dir
+/home/eduard/Escritorio/Robokin/ROS/build/robokin_world/CMakeFiles/install.dir
+/home/eduard/Escritorio/Robokin/ROS/build/robokin_world/CMakeFiles/list_install_components.dir
+/home/eduard/Escritorio/Robokin/ROS/build/robokin_world/CMakeFiles/rebuild_cache.dir
+/home/eduard/Escritorio/Robokin/ROS/build/robokin_world/CMakeFiles/turtlebot3_drive.dir
+/home/eduard/Escritorio/Robokin/ROS/build/robokin_world/CMakeFiles/robokin_world_uninstall.dir
+/home/eduard/Escritorio/Robokin/ROS/build/robokin_world/CMakeFiles/uninstall.dir

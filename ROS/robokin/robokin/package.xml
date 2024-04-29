@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>robokin</name>
+  <version>2.2.4</version>
+  <description>
+    ROS 2 packages for Robokin
+  </description>
+  <maintainer email="cbotnav@epsg.upv.es">Carlos Botella</maintainer>
+  <license>Apache 2.0</license>
+  <url type="repository">https://github.com/CarlosBotella/Robokin</url>
+  <author email="mdelac2@epsg.upv.es">Marc de la Cruz</author>
+  <author email="gdelaf@epsg.upv.es">Gerard de la Fuente</author>
+  <author email="eoliiri@epsg.upv.es">Eduard Oliva</author>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <exec_depend>robokin_publisher</exec_depend>
+  <exec_depend>robokin_world</exec_depend>
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

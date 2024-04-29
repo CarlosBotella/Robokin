@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# Get the current branch name
+current_branch=$(git symbolic-ref --short HEAD)
+if [[ $current_branch == "master" ]]; then
+  echo "No se pueden hacer commits directamente sobre master"
+  echo "Los commits se tienen que hacer sobre una rama llamada 'release(num. sprint)' "
+  exit 1
+fi
