@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <style>
+        /* Estilos adicionales */
+        .logo {
+            width: 120px;
+            height: 120px;
+            background-image: url("../img/robokin.jpg");
+            background-size: cover;
+            border-radius: 50%;
+            margin: 0 auto;
+        }
+        body {
+            font-family: "Roboto", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        h1 {
+            width: 100%;
+            text-align: center;
+        }
+        .categorias {
+            margin-bottom: 20px;
+        }
+        .menu ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .menu ul li {
+            margin-bottom: 10px;
+            padding: 10px 20px;
+            font-size: 18px;
+            color: #000000; /* Negro */
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .menu ul li:hover {
+            background-color: #f5f5f5;
+            color: lightgreen; 
+        }
+        .options {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            width: calc(70% - 20px);
+        }
+        .option {
+            width: 100%;
+            margin: 10px;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 2px solid #000000; /* Negro */
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s;
+            display: none; /* Ocultar por defecto */
+        }
+        .option.active {
+            display: block;
+            order: 1;
+        }
+        .option:hover {
+            transform: translateY(-5px);
+        }
+        .option h3 {
+            font-size: 20px;
+            color: #000000; /* Negro */
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .option img {
+            width: 50%;
+            border-radius: 5px;
+            margin-top: 10px;
+            display: block; /* Asegura que la imagen se comporte como un bloque */
+            margin: 0 auto; /* Establece los márgenes automáticos para centrar la imagen horizontalmente */
+        }
+        .option p {
+            font-size: 16px;
+            color: #000000; 
+            text-align: center;
+        }
+        .unidades {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        .unidades button {
+            background-color: lightgreen; 
+            max-width: 40%;
+            max-height: fit-content;
+            color: black; 
+            margin: 20px 50px; /* Reduce el margen horizontal entre los botones a 50px */
+            border: 1px;
+            border-color: #000000;
+            border-radius: 5px;
+            padding: 5px 10px;
+            font-size: 16px;
+            flex: 1;    
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .unidades button:hover {
+            background-color: #0a5002; /* verde oscuro */
+        }
+        .unidades1 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        .unidades1 button {
+            background-color: lightgreen; 
+            max-width: 40%;
+            max-height: fit-content;
+            color: black; 
+            margin: 20px 50px; /* Reduce el margen horizontal entre los botones a 50px */
+            border: 1px;
+            border-color: #000000;
+            border-radius: 5px;
+            padding: 5px 10px;
+            font-size: 16px;
+            flex: 1;    
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        
+        .unidades1 button:hover {
+            background-color: #0a5002; /* verde oscuro */
+        }
+        .unidades2 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        .unidades2 button {
+            background-color: lightgreen; 
+            max-width: 40%;
+            max-height: fit-content;
+            color: black; 
+            margin: 20px 50px; /* Reduce el margen horizontal entre los botones a 50px */
+            border: 1px;
+            border-color: #000000;
+            border-radius: 5px;
+            padding: 5px 10px;
+            font-size: 16px;
+            flex: 1;    
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .unidades2 button:hover {
+            background-color: #0a5002; /* verde oscuro */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="logo"></div>
+    <h1>Productos</h1>
+    <div class="menu">
+        <ul>
+            <li onclick="showOptions('Desayunos')">Desayunos</li>
+            <li onclick="showOptions('Aperitivos')">Aperitivos</li>
+            <li onclick="showOptions('Hamburguesas')">Hamburguesas</li>
+            <li onclick="showOptions('Bebidas')">Bebidas</li>
+            <li onclick="showOptions('Postres')">Postres</li>
+        </ul>
+    </div>
+    <div class="options">
+        <div class="option" id="Desayunos">
+            <h3>Desayunos</h3>
+            <img src="../img/cruasan_con_fokin_cafe.jpg" alt="Desayuno 1">
+            <p>Curasán y café con leche</p>
+            <img src="../img/desayuno_americano.jpg" alt="Desayuno 2">
+            <p>Desayuno americano (bacon, tortitas, huevos, pan, café y zumo)</p>
+            <img src="../img/desayuno_espanol.jpg" alt="Desayuno 3">
+            <p>Tostadas con tomate y café</p>
+        </div>
+        <div class="option" id="Aperitivos">
+            <h3>Aperitivos</h3>
+            <img src="../img/entrante1.jpg" alt="Entrante 1">
+            <p>Pulled Pork Fries</p>
+            <img src="../img/mac-and-cheese.jpg" alt="Entrante 2">
+            <p>Mac and Cheese</p>
+            <img src="../img/nachos.jpg" alt="Entrante 3">
+            <p>Robonachos</p>
+        </div>
+        <div class="option" id="Hamburguesas">
+            <h3>Hamburguesas</h3>
+            <img src="../img/hamburguesa1.jpg" alt="Hamburguesa 1">
+            <p>Roboburger</p>
+            <img src="../img/hamburguesa2.jpg" alt="Hamburguesa 2">
+            <p>Gandiburger</p>
+            <img src="../img/hamburguesa3jpg.jpg" alt="Hamburguesa 3">
+            <p>Ecoburger</p>
+        </div>  
+        <div class="option" id="Bebidas">
+            <h3>Bebidas</h3>
+            <img src="../img/mahou.jpg" alt="Cerveza 1">
+            <p>Mahou</p>
+            <div class="unidades" id="unidades">
+                <button onclick="quitarCesta('Mahou', 'unidadesMahou')">-</button>
+                <div id="unidadesMahou"></div>
+                <button onclick="anyadirCesta('Mahou', 'unidadesMahou')">+</button>
+                
+            </div>
+            <div id="infoProducto"></div>
+            <img src="../img/cerveza2.jpg" alt="Cerveza 2">
+            <p>Estrella Damm</p>
+            <div class="unidades1" id="unidades1">
+                <button onclick="quitarCesta('EstrellaDamm', 'unidadesEstrella')">-</button>
+                <div id="unidadesEstrella"></div>
+                <button onclick="anyadirCesta('EstrellaDamm', 'unidadesEstrella')">+</button>
+                
+            </div>
+            <img src="../img/heineken.jpg" alt="Cerveza 3">
+            <p>Heineken</p>
+            <div class= "unidades2" id="unidades2">
+                <button onclick="quitarCesta('Heineken', 'unidadesHeineken')">-</button>
+                <div id="unidadesHeineken"></div>
+                <button onclick="anyadirCesta('Heineken', 'unidadesHeineken')">+</button>
+                
+            </div>
+        </div>
+        <div class="option" id="Postres">
+            <h3>Postres</h3>
+            <img src="../img/cheesecake.jpg" alt="Postre 1">
+            <p>Cheesecake</p>
+            <img src="../img/brazo-de-gitano.jpg" alt="Postre 2">
+            <p>Brazo de Gitano (by Pablo Perellón)</p>
+            <img src="../img/perfecbanana-split.jpg" alt="Postre 3">
+            <p>Banana Split</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    function showOptions(category) {
+        var options = document.querySelectorAll('.option');
+        options.forEach(function(option) {
+            option.classList.remove('active');
+        });
+        var selectedOption = document.getElementById(category);
+        selectedOption.classList.add('active');
+    }
+</script>
+
+<script src="../js/productos.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .remote {
+            width: 200px;
+            height: 200px;
+            border: 2px solid #000;
+            border-radius: 50%;
+            position: relative;
+        }
+        .arrow {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .up {
+            border-width: 0 20px 30px 20px;
+            border-color: transparent transparent black transparent;
+            cursor: pointer;
+            transform: translate(-50%, -50%) translateY(-50px);
+        }
+        .down {
+            border-width: 30px 20px 0 20px;
+            border-color: black transparent transparent transparent;
+            cursor: pointer;
+            transform: translate(-50%, -50%) translateY(50px);
+        }
+        .left {
+            border-width: 20px 30px 20px 0;
+            border-color: transparent black transparent transparent;
+            cursor: pointer;
+            transform: translate(-50%, -50%) translateX(-50px);
+        }
+        .right {
+            border-width: 20px 0 20px 30px;
+            border-color: transparent transparent transparent black;
+            cursor: pointer;
+            transform: translate(-50%, -50%) translateX(50px);
+        }
+        .control-buttons {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .control-buttons button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .control-buttons button:hover {
+            background-color: lightgreen;
+        }
+        .control-buttons button:active {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Botón para regresar -->
+<button id="backButton">Regresar</button>
+
+<div-class="mapa">
+    <canvas width="200" height="200"
+			style="background-color: green">
+	</canvas>
+</div-class>
+
+<div class="remote">
+    <div class="arrow up" onclick="moveForward()"></div>
+    <div class="arrow down" onclick="moveBackward()"></div>
+    <div class="arrow left" onclick="moveLeft()"></div>
+    <div class="arrow right" onclick="moveRight()"></div>
+</div>
+
+<div class="control-buttons">
+    <button onclick="connect()">Conectar</button>
+    <button onclick="disconnect()">Desconectar</button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/roslib@1/build/roslib.min.js"></script>
+<script>
+    var ros;
+    var alante = 0.0;
+    var lados = 0.0;
+
+    function connect() {
+        ros = new ROSLIB.Ros({
+            url: 'ws://127.0.0.1:9090/'
+        });
+
+        ros.on('connection', function() {
+            console.log('Conexión establecida con ROS.');
+        });
+
+        ros.on('error', function(error) {
+            console.error('Error al conectar con ROS:', error);
+        });
+
+        ros.on('close', function() {
+            console.log('Conexión con ROS cerrada.');
+        });
+    }
+
+    function disconnect() {
+        if (ros) {
+            ros.close();
+            console.log('Desconexión de ROS.');
+        } else {
+            console.log('No hay conexión activa con ROS.');
+        }
+    }
+
+    function moveForward() {
+        callService("adelante");
+    }
+
+    function moveBackward() {
+        callService("atras");
+    }
+
+    function moveLeft() {
+        lados += 0.1;
+        move();
+    }
+
+    function moveRight() {
+        lados -= 0.1;
+        move();
+    }
+
+    function callService(valor) {
+        // Aquí se puede implementar la lógica para llamar al servicio con el valor correspondiente
+        console.log("Movimiento:", valor);
+    }
+
+    function move() {
+        alante += 0.1;
+        // Aquí se puede implementar la lógica para enviar el movimiento al robot
+        console.log("Movimiento hacia adelante. Distancia:", alante, "Ángulo:", lados);
+    }
+</script>
+
+<script src="../js/scripts.js"></script>
+
+</body>
+</html>
