@@ -19,5 +19,5 @@ server:
 
 empezar:
 
-	firefox localhost:8000
+	firefox localhost:8000/html/option.html
 	make -j 4 bridge gazebo nav server

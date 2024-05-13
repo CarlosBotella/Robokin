@@ -1,3 +1,0 @@
-[console_scripts]
-simple_publisher = robokin_publisher.simple_publisher:main
-

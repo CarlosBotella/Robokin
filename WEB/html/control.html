@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control</title>
+    <link rel="stylesheet" href="../css/control.css">
+</head>
+<body>
+<div class="mapa">
+    <canvas id="myCanvas" width="500" height="500">
+    </canvas>
+</div>
+
+<div class="remote">
+    <div class="arrow up"  id="btn_delante"></div>
+    <div class="arrow down" id="btn_stop"></div>
+    <div class="arrow left" id="btn_izquierda"></div>
+    <div class="arrow right" id="btn_derecha"></div>
+</div>
+
+<div class="control-buttons">
+    <button id ="btn_con">Conectar</button>
+    <button id = "btn_dis">Desconectar</button>
+    <button id = "btn_mesa">Ir Mesa</button>
+    <button class="button"><a href="admin.html">Regresar</a></button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/roslib@1/build/roslib.min.js"></script>
+<script src="../js/control.js"></script>
+</body>
+</html>

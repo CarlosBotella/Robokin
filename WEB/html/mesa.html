@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante - Mesa</title>
+    <link rel="stylesheet" href="../css/mesa.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Número de Mesa</h1>
+    <form onsubmit="return confirmarMesa()">
+        <input type="text" id="mesa" name="mesa" placeholder="Número de mesa (1-10)" pattern="[1-9]|10" required>
+        <input type="submit" value="Confirmar">
+    </form>
+    <button id="backButton" onclick="window.location.href='option.html';">Regresar</button>
+</div>
+
+<script>
+    function confirmarMesa() {
+        var mesa = document.getElementById("mesa").value;
+        
+        // Convertir el valor del campo a número
+        var numeroMesa = parseInt(mesa);
+        
+        // Verificar si el número de mesa está entre 1 y 10
+        if (numeroMesa >= 1 && numeroMesa <= 10) {
+            // Redireccionar a productos.html
+            window.location.href = "productos.html";
+            return false; // Evitar el envío del formulario
+        } else {
+            // Mostrar un mensaje de error si el número de mesa está fuera del rango
+            alert("El número de mesa debe estar entre 1 y 10");
+            return false; // Evitar el envío del formulario
+        }
+    }
+</script>
+
+<script src="../js/scripts.js"></script>
+
+</body>
+</html>

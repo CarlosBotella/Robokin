@@ -1,8 +1,0 @@
-source;share/robokin/hook/cmake_prefix_path.ps1
-source;share/robokin/hook/cmake_prefix_path.dsv
-source;share/robokin/hook/cmake_prefix_path.sh
-source;share/robokin/local_setup.bash
-source;share/robokin/local_setup.dsv
-source;share/robokin/local_setup.ps1
-source;share/robokin/local_setup.sh
-source;share/robokin/local_setup.zsh
