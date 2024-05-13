@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', event => {
     document.getElementById("btn_mesa").addEventListener("click", irmesa)
 
 
+
     //Variables
     var alante = 0.0
     var lados = 0.0
@@ -39,6 +40,7 @@ document.addEventListener('DOMContentLoaded', event => {
             data.connected = true
             console.log("Conexion con ROSBridge correcta")
             subscribe()
+            document.getElementById("estado").textContent = "Estado: CONECTADO"
         })
         data.ros.on("error", (error) => {
             console.log("Se ha producido algun error mientras se intentaba realizar la conexion")
@@ -54,6 +56,7 @@ document.addEventListener('DOMContentLoaded', event => {
         data.ros.close()
         data.connected = false
         console.log('Clic en botón de desconexión')
+        document.getElementById("estado").textContent = "Estado: DESCONECTADO"
     }
 
     document.getElementById("btn_delante").addEventListener("click", delante)
