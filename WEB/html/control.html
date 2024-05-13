@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control</title>
+    <link rel="stylesheet" href="../css/control.css">
+</head>
+<body>
+<div class="mapa">
+    <canvas width="200" height="200"
+			style="background-color: green">
+	</canvas>
+</div>
+
+<div class="remote">
+    <div class="arrow up" onclick="moveForward()"></div>
+    <div class="arrow down" onclick="moveBackward()"></div>
+    <div class="arrow left" onclick="moveLeft()"></div>
+    <div class="arrow right" onclick="moveRight()"></div>
+</div>
+
+<div class="control-buttons">
+    <button onclick="connect()">Conectar</button>
+    <button onclick="disconnect()">Desconectar</button>
+    <button class="button"><a href="admin.html">Regresar</a></button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/roslib@1/build/roslib.min.js"></script>
+<script>
+    var ros;
+    var alante = 0.0;
+    var lados = 0.0;
+
+    function connect() {
+        ros = new ROSLIB.Ros({
+            url: 'ws://127.0.0.1:9090/'
+        });
+
+        ros.on('connection', function() {
+            console.log('Conexión establecida con ROS.');
+        });
+
+        ros.on('error', function(error) {
+            console.error('Error al conectar con ROS:', error);
+        });
+
+        ros.on('close', function() {
+            console.log('Conexión con ROS cerrada.');
+        });
+    }
+
+    function disconnect() {
+        if (ros) {
+            ros.close();
+            console.log('Desconexión de ROS.');
+        } else {
+            console.log('No hay conexión activa con ROS.');
+        }
+    }
+
+    function moveForward() {
+        callService("adelante");
+    }
+
+    function moveBackward() {
+        callService("atras");
+    }
+
+    function moveLeft() {
+        lados += 0.1;
+        move();
+    }
+
+    function moveRight() {
+        lados -= 0.1;
+        move();
+    }
+
+    function callService(valor) {
+        // Aquí se puede implementar la lógica para llamar al servicio con el valor correspondiente
+        console.log("Movimiento:", valor);
+    }
+
+    function move() {
+        alante += 0.1;
+        // Aquí se puede implementar la lógica para enviar el movimiento al robot
+        console.log("Movimiento hacia adelante. Distancia:", alante, "Ángulo:", lados);
+    }
+</script>
+
+</body>
+</html>

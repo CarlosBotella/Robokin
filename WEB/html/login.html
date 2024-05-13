@@ -27,6 +27,9 @@
 </div>
 
 <script>
+    // Limpiar historial de navegación
+    window.history.replaceState(null, "", "inicio.html");
+
     function validarCredenciales() {
         var username = document.getElementById("username").value;
         var password = document.getElementById("password").value;
@@ -44,7 +47,7 @@
 
     // Función para redirigir a la página de inicio.html
     document.getElementById("backButton").addEventListener("click", function() {
-        window.location.href = "inicio.html";
+        window.location.href = "inicio.html"; // Redirigir siempre a inicio.html
     });
 </script>
 

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/productos.css">
+    <title>Productos</title>
+<div class="container">
+    <div class="logo"></div>
+    <h1>Productos</h1>
+    
+    <div id="precioTotal"></div>
+    <button class="button"><a href="mesa.html">Regresar</a></button>
+
+    <button onclick="mostrarResumenPedido()">Pagar</button>
+
+    <!-- Agregamos un div oculto que contendrá el resumen del pedido y los botones de confirmar y cancelar -->
+    <div id="popupResumenPedido" class="popup">
+        <div id="resumenPedido"></div>
+        <button onclick="confirmarPedido()">Confirmar</button>
+        <button onclick="cancelarPedido()">Cancelar</button>
+    </div>
+
+    <div class="menu">
+        <ul>
+            <li onclick="showOptions('Desayunos')">Desayunos</li>
+            <li onclick="showOptions('Aperitivos')">Aperitivos</li>
+            <li onclick="showOptions('Hamburguesas')">Hamburguesas</li>
+            <li onclick="showOptions('Bebidas')">Bebidas</li>
+            <li onclick="showOptions('Postres')">Postres</li>
+        </ul>
+    </div>
+    <div class="options">
+        <div class="option" id="Desayunos">
+            <h3>Desayunos</h3>
+            <img src="../img/cruasan_con_fokin_cafe.jpg" alt="Desayuno 1">
+            <p>Curasán y café con leche</p>
+            <img src="../img/desayuno_americano.jpg" alt="Desayuno 2">
+            <p>Desayuno americano (bacon, tortitas, huevos, pan, café y zumo)</p>
+            <img src="../img/desayuno_espanol.jpg" alt="Desayuno 3">
+            <p>Tostadas con tomate y café</p>
+        </div>
+        <div class="option" id="Aperitivos">
+            <h3>Aperitivos</h3>
+            <img src="../img/entrante1.jpg" alt="Entrante 1">
+            <p>Pulled Pork Fries</p>
+            <img src="../img/mac-and-cheese.jpg" alt="Entrante 2">
+            <p>Mac and Cheese</p>
+            <img src="../img/nachos.jpg" alt="Entrante 3">
+            <p>Robonachos</p>
+        </div>
+        <div class="option" id="Hamburguesas">
+            <h3>Hamburguesas</h3>
+            <img src="../img/hamburguesa1.jpg" alt="Hamburguesa 1">
+            <p>Roboburger</p>
+            <img src="../img/hamburguesa2.jpg" alt="Hamburguesa 2">
+            <p>Gandiburger</p>
+            <img src="../img/hamburguesa3jpg.jpg" alt="Hamburguesa 3">
+            <p>Ecoburger</p>
+        </div>  
+        <div class="option" id="Bebidas">
+            <h3>Bebidas</h3>
+            <img src="../img/mahou.jpg" alt="Cerveza 1">
+            <p>Mahou</p>
+            <div class="unidades" id="unidades">
+                <button onclick="quitarCesta('Mahou', 'Mahou')">-</button>
+                <div id="Mahou"></div>
+                <button onclick="anyadirCesta('Mahou', 'Mahou')">+</button>     
+            </div>
+            <div id="infoProducto"></div>
+            <img src="../img/cerveza2.jpg" alt="Cerveza 2">
+            <p>Estrella Damm</p>
+            <div class="unidades1" id="unidades1">
+                <button onclick="quitarCesta('EstrellaDamm', 'EstrellaDamm')">-</button>
+                <div id="EstrellaDamm"></div>
+                <button onclick="anyadirCesta('EstrellaDamm', 'EstrellaDamm')">+</button>
+                
+            </div>
+            <img src="../img/heineken.jpg" alt="Cerveza 3">
+            <p>Heineken</p>
+            <div class= "unidades2" id="unidades2">
+                <button onclick="quitarCesta('Heineken', 'Heineken')">-</button>
+                <div id="Heineken"></div>
+                <button onclick="anyadirCesta('Heineken', 'Heineken')">+</button>
+                
+            </div>
+        </div>
+        <div class="option" id="Postres">
+            <h3>Postres</h3>
+            <img src="../img/cheesecake.jpg" alt="Postre 1">
+            <p>Cheesecake</p>
+            <img src="../img/brazo-de-gitano.jpg" alt="Postre 2">
+            <p>Brazo de Gitano (by Pablo Perellón)</p>
+            <img src="../img/perfecbanana-split.jpg" alt="Postre 3">
+            <p>Banana Split</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    function showOptions(category) {
+        var options = document.querySelectorAll('.option');
+        options.forEach(function(option) {
+            option.classList.remove('active');
+        });
+        var selectedOption = document.getElementById(category);
+        selectedOption.classList.add('active');
+    }
+</script>
+
+<script src="../js/productos.js"></script>
+
+</body>
+</html>

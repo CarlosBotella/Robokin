@@ -7,9 +7,8 @@
     <link rel="stylesheet" href="../css/option.css">
 </head>
 <body>
-
     <div class="header">
-        <div class="logo"></div>
+        <div class="logo">ROBOKIN</div>
         <a href="login.html" class="account-icon"> <!-- Enlace al hacer clic en el icono -->
             <img src="../img/icons/MdiAccount.svg" alt="Icono de cuenta" id="cuentaIcon">
         </a>
@@ -28,7 +27,19 @@
     </div>
 </div>
 
-<script src="../js/option.js"></script>
+<button id="backButton">Regresar</button>
+
+<script>
+    // Función para redirigir a la página de inicio.html
+    document.getElementById("backButton").addEventListener("click", function() {
+        var fromOption = window.location.search.includes("fromOption=true");
+        if (fromOption) {
+            window.location.href = "inicio.html"; // Redirigir a inicio.html
+        } else {
+            window.history.back(); // Regresar a la página anterior si no viene de option.html
+        }
+    });
+</script>
 
 </body>
 </html>
