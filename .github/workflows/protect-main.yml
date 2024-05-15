@@ -1,0 +1,26 @@
+on:
+  push:
+    branches:
+      - "*"
+
+jobs:
+  prevent-commits:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check Branch
+        run: |
+          echo "Checking branch..."
+          if [[ $GITHUB_REF == 'refs/heads/master' ]]; then
+            commits_length=$(echo "${{ github.event.head_commit.message }}")
+            if [[ "${{ github.event.head_commit.message }}" =~ "Merge" ]]; then
+              echo "This is a merge action."
+              echo "${{ github.actor }}"
+            else
+              if [[ "${{ github.actor }}" == "CarlosBotella" ]]; then
+                exit 0
+              else
+                exit 2
+              fi
+            fi
+          fi
