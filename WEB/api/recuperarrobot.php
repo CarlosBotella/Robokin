@@ -8,7 +8,7 @@
 
         $id_robot = $_GET['id_robot'];
 
-        $query = "SELECT * FROM robot WHERE id_robot = '$id_robot'";
+        $query = "SELECT * FROM robot WHERE id_robot = '$id_robot'"; //cambiar por el nombre
 
         $result = $mysql->query($query);
         

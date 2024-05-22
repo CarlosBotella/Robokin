@@ -61,6 +61,7 @@ async function recuperar_producto(nombre){
 //---------------------------------------------------------------------------------------------------
 //   nombre: TEXT, pose_x: N, pose_y: N, pose_w: N, stock: N, precio: N ----> actualizar_producto() 
 //---------------------------------------------------------------------------------------------------
+
 async function actualizar_producto(nombre,pose_x,pose_y,pose_w,stock,precio){
     $(document).ready(async function(){
         $.ajax({

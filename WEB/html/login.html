@@ -3,12 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurante - Inicio de Sesión</title>
-    <link rel="stylesheet" href="../css/login.css">
+    <title>Login</title>
 
+    <!-- Etiquetas de preconexión para Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Hoja de estilos de Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Otras etiquetas como hojas de estilos personalizadas, scripts, etc. -->
+    <link rel="stylesheet" href="../css/login.css">
 </head>
 <body>
 
@@ -36,7 +41,6 @@
         
         // Verificar las credenciales
         if (username === "admin" && password === "admin") {
-            alert("Inicio de sesión exitoso");
             window.location.href = "option.html"; // Redirigir a option.html
             return false; // Evitar el envío del formulario
         } else {
