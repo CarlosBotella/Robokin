@@ -12,11 +12,9 @@ body {
 .container {
     width: 90%;
     max-width: 400px;
-    margin: 30px auto;
     padding: 20px;
     background-color: #3d4246;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
     text-align: center;
     position: relative;
 }
@@ -33,6 +31,14 @@ body {
 h1 {
     font-size: 28px;
     margin-bottom: 20px;
+    color: #ffffff;
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 300;
     color: #ffffff;
 }
 
@@ -89,4 +95,45 @@ input[type="submit"]:hover {
 
 #backButton:hover {
     background-color: #333;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+}
+
+.button {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 20px;
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #000;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s, color 0.3s;
+    text-decoration: none;
+}
+
+.button img {
+    width: 80px;
+    height: 80px;
+}
+
+.button span {
+    font-size: 18px;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.button:hover {
+    background-color: #000;
+    color: #fff;
 }

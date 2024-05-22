@@ -13,27 +13,28 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     
         <!-- Otras etiquetas como hojas de estilos personalizadas, scripts, etc. -->
-        <link rel="stylesheet" href="../css/option.css">
+        <link rel="stylesheet" href="../css/login.css">
     </head>
 <body>
-    <div class="header">
-        <img src="../img/robokin.jpg" alt="Robokin Logo" width="100" height="100" style="border-radius: 50%;">
-    </div>
 
-<div class="container">
-    <div class="button-container">
-        <a href="admin.html" class="button admin" id="adminButton">
-            <img src="../img/icons/AdminSettings.svg" alt="Icono de administrador">
-            <span>Admin</span> <!-- Texto "Admin" -->
-        </a>
-        <a href="mesa.html" class="button mesa" id="mesaButton">
-            <img src="../img/icons/TableBar.svg" alt="Icono de mesa">
-            <span>Mesa</span> <!-- Texto "Mesa" -->
-        </a>
+    <div class="container">
+        <!-- Botón para regresar -->
+        <div class="logo"></div> <!-- Logo -->
+        <h2>Escoge tu rol de usuario</h2>
+        <div class="container">
+            <div class="button-container">
+                <a href="admin.html" class="button admin" id="adminButton">
+                    <img src="../img/icons/AdminSettings.svg" alt="Icono de administrador">
+                    <span>Admin</span> <!-- Texto "Admin" -->
+                </a>
+                <a href="mesa.html" class="button mesa" id="mesaButton">
+                    <img src="../img/icons/TableBar.svg" alt="Icono de mesa">
+                    <span>Mesa</span> <!-- Texto "Mesa" -->
+                </a>
+            </div>
+        </div>
+        <button id="backButton">Regresar</button>
     </div>
-</div>
-
-<button id="backButton">Regresar</button>
 
 <script>
     // Función para redirigir a la página de inicio.html

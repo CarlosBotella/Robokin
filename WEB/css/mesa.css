@@ -75,6 +75,10 @@ button {
     margin-top: 10px; /* Margen superior para separar del formulario */
 }
 
+#backButton:hover {
+    background-color: #333;
+}
+
 input[type="submit"]:hover,
 button:hover {
     background-color: #333;
