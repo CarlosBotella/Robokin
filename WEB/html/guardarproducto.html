@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="comprobarsesion2()">
+    <div class="container">
+        <!-- Botón para regresar -->
+        <div class="logo"></div> <!-- Logo -->
+        <h1>AÑADIR PRODCUTO</h1>
+
+        <form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <label for="stock">Stock:</label>
+            <input type="text" id="stock" name="stock" required>
+            <label for="precio">Precio:</label>
+            <input type="text" id="precio" name="precio" required>
+            <label for="tipo">Tipo:</label>
+            <select id="tipo" name="tipo" required>
+                <option value="comida">Comida</option>
+                <option value="bebida">Bebida</option>
+            </select>
+            <label for="descripcion">descripcion:</label>
+            <textarea type="text" id="descripcion" name="descripcion" required></textarea>
+            <label for="foto">Foto (PNG):</label>
+            <input type="file" id="foto" name="foto" accept="image/png, image/jpeg" required>
+            <input type="button" value="Guardar producto" onclick="guardar_producto()">
+        </form>
+        <script src="../js/server.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </div>
+</body>
+</html>

@@ -15,7 +15,7 @@
         <!-- Otras etiquetas como hojas de estilos personalizadas, scripts, etc. -->
         <link rel="stylesheet" href="../css/login.css">
     </head>
-<body>
+<body onload="comprobarsesion2()">
 
     <div class="container">
         <!-- Botón para regresar -->
@@ -33,20 +33,13 @@
                 </a>
             </div>
         </div>
-        <button id="backButton">Regresar</button>
     </div>
+    <a id = "logout" href="../api/cerrarsesion.php    ">
+        Logout
+      </a>
 
-<script>
-    // Función para redirigir a la página de inicio.html
-    document.getElementById("backButton").addEventListener("click", function() {
-        var fromOption = window.location.search.includes("fromOption=true");
-        if (fromOption) {
-            window.location.href = "inicio.html"; // Redirigir a inicio.html
-        } else {
-            window.history.back(); // Regresar a la página anterior si no viene de option.html
-        }
-    });
-</script>
+<script src="../js/server.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </body>
 </html>

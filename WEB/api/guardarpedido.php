@@ -5,13 +5,13 @@
     if($_SERVER['REQUEST_METHOD'] == 'POST')
     {
         require_once("db.php");
-
-        $id_robot = $_POST['id_robot'];
-        $id_mesa = $_POST['id_mesa'];
+        $idmesa = $_POST['idmesa'];
+        $idrobot = $_POST['idrobot'];
         $total = $_POST['total'];
+        $fecha = $_POST['fecha'];
 
 
-        $query = "INSERT INTO pedido (id_robot, id_mesa, total) VALUES ('$id_robot', '$id_mesa', '$total')";
+        $query = "INSERT INTO pedido (idmesa, idrobot, total, fecha) VALUES ('$idmesa', '$idrobot', '$total', '$fecha')";
 
         $result = $mysql->query($query);
 

@@ -7,7 +7,7 @@
         "localhost",
         "root",
         "",
-        "robokin2"
+        "robokin"
     );
 
     if($mysql->connect_error)

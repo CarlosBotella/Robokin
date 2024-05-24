@@ -1,9 +1,11 @@
 // DOM Category 
+
 const catg = document.querySelectorAll('.nav-links.category');
 const menus = document.querySelectorAll('.menu');
 const addCart = document.querySelectorAll('.menu button');
 const listOrder = document.querySelector('.order-inner');
 const sidenav = document.querySelector('nav .nav-links');
+
 
 
 Array.from(sidenav.children).forEach(targetMenu => {
@@ -162,6 +164,7 @@ addCart.forEach(el => {
 // Button Plus
 const btnPlusOrder = (event) => {
     const countText = event.target.previousElementSibling;
+
     let count = event.target.previousElementSibling.firstChild.data;
     count = parseInt(count) + 1;
     countText.innerHTML = count;
@@ -189,7 +192,8 @@ const btnRemoveOrder = (event) => {
 
     listOrder.removeChild(removeOrder);
     addCart.forEach(btnCart => {
-        if (nameOrderItem == btnCart.previousElementSibling.firstChild.nextElementSibling.firstChild.data) {
+        
+        if (nameOrderItem == btnCart.previousElementSibling.firstChild.textContent) {
             btnCart.classList.remove('active');
             btnCart.innerHTML = '&#43;';
         }
@@ -213,7 +217,7 @@ const checkOutSum = () => {
         // Obtener el costo eliminando el símbolo del euro y convirtiéndolo a número
         let cost = parseFloat(itemCost[i].textContent.replace('€', ''));
         let iCount = parseInt(itemCount[i].textContent);
-        
+
         Qty += iCount;
         subTotal += iCount * cost;
     }
@@ -226,14 +230,37 @@ const checkOutSum = () => {
     return [items, Qty, subTotal, total];
 }
 
-
 const checkOutPrint = () => {
     const [items, qty, subTotal, total] = checkOutSum();
 
-    document.querySelector('#qty h5').textContent = `${items} unidad(es)`;
+    document.querySelector('#qty h5').textContent = `${items} Producto(s)`;
     document.querySelector('#qty span').textContent = `${qty}`;
     document.querySelector('#subtotal h4').textContent = `€${subTotal.toFixed(2)}`;
     document.querySelectorAll('#total h3')[1].textContent = `€${total.toFixed(2)}`;
+
+    // Actualizar el precio total por producto
+    const orderItems = listOrder.querySelectorAll('.order-item');
+    orderItems.forEach(orderItem => {
+        const priceElement = orderItem.querySelector('.price');
+        const countElement = orderItem.querySelector('small');
+        const price = parseFloat(priceElement.textContent.replace('€', ''));
+        const count = parseInt(countElement.textContent);
+        const totalPrice = price * count;
+
+        // Verificar si ya existe un precio total por producto
+        const existingTotalPriceElement = orderItem.querySelector('.total-price');
+        if (existingTotalPriceElement) {
+            // Si existe, actualizar su texto
+            existingTotalPriceElement.textContent = `Total: €${totalPrice.toFixed(2)}`;
+        } else {
+            // Si no existe, crear un nuevo elemento p y agregarlo debajo del precio actual
+            const totalPriceElement = document.createElement('p');
+            
+            totalPriceElement.classList.add('total-price');
+            totalPriceElement.textContent = `Total: ${totalPrice.toFixed(2)}€`;
+            orderItem.appendChild(totalPriceElement);
+        }
+    });
 }
 
 

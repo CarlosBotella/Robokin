@@ -10,9 +10,10 @@
         $pose_x = $_POST['pose_x'];
         $pose_y = $_POST['pose_y'];
         $pose_w = $_POST['pose_w'];
+        $email = $_POST['email'];
 
 
-        $query = "INSERT INTO robot (estado, pose_x, pose_y, pose_w) VALUES ('$estado', '$pose_x', '$pose_y', '$pose_w')";
+        $query = "INSERT INTO robot (estado, pose_x, pose_y, pose_w, email) VALUES ('$estado', '$pose_x', '$pose_y', '$pose_w', '$email')";
 
         $result = $mysql->query($query);
 

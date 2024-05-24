@@ -13,8 +13,9 @@
         $pose_w = $_POST['pose_w'];
         $stock = $_POST['stock'];
         $precio = $_POST['precio'];
+        $idproducto = $_POST['idproducto'];
 
-        $query = "UPDATE producto  SET nombre='$nombre', pose_x='$pose_x' , pose_y = '$pose_y', pose_w = '$pose_w', stock = '$stock', precio = '$precio' WHERE nombre='$nombre'";
+        $query = "UPDATE producto  SET nombre='$nombre', pose_x='$pose_x' , pose_y = '$pose_y', pose_w = '$pose_w', stock = '$stock', precio = '$precio' WHERE idproducto='$idproducto'";
 
 
         $result = $mysql->query($query);

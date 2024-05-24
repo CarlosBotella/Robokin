@@ -1,14 +1,14 @@
 <?php
     //-------------------------------------------------------------------------------------------------------
-    //          
+    //          email:text --> recuperarusuario() --> [email, nombreyapliidos, contrasenya]
     //-------------------------------------------------------------------------------------------------------
     if($_SERVER['REQUEST_METHOD'] == 'GET')
     {
         require_once("db.php");
 
-        $idpedido = $_GET['idpedido'];
+        $email = $_GET['email'];
 
-        $query = "SELECT * FROM pedidoproducto WHERE idpedido = '$idpedido'";
+        $query = "SELECT * FROM usuario WHERE email = '$email'";
 
         $result = $mysql->query($query);
         
@@ -27,3 +27,4 @@
         $result -> close();
         $mysql -> close();
     }
+       

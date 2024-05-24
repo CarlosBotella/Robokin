@@ -5,13 +5,13 @@
     if($_SERVER['REQUEST_METHOD'] == 'POST')
     {
         require_once("db.php");
-
-        $nombre = $_POST['nombre'];
         $pose_x = $_POST['pose_x'];
         $pose_y = $_POST['pose_y'];
+        $pose_w = $_POST['pose_w'];
+        $email = $_POST['email'];
 
 
-        $query = "INSERT INTO mesa (nombre, pose_x, pose_y) VALUES ('$nombre', '$pose_x', '$pose_y')";
+        $query = "INSERT INTO mesa (pose_x, pose_y, pose_w, email) VALUES ('$pose_x', '$pose_y', '$pose_w', '$email')";
 
         $result = $mysql->query($query);
 

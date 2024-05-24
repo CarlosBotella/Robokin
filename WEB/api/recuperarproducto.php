@@ -6,9 +6,9 @@
     {
         require_once("db.php");
 
-        $nombre = $_GET['nombre'];
+        $idproducto = $_GET['idproducto'];
 
-        $query = "SELECT * FROM producto WHERE nombre = '$nombre'";
+        $query = "SELECT * FROM producto WHERE idproducto = '$idproducto'";
 
         $result = $mysql->query($query);
         
@@ -27,4 +27,3 @@
         $result -> close();
         $mysql -> close();
     }
-       

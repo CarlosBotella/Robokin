@@ -7,13 +7,13 @@
     if($_SERVER['REQUEST_METHOD'] == 'POST')
     {
         require_once("db.php");
-
-        $id_pedido = $_POST['id_pedido'];
-        $id_robot = $_POST['id_robot'];
-        $id_mesa = $_POST['id_mesa'];
+        $idpedido = $_POST['idpedido'];
+        $idmesa = $_POST['idmesa'];
+        $idrobot = $_POST['idrobot'];
         $total = $_POST['total'];
+        $fecha = $_POST['fecha'];
 
-        $query = "UPDATE pedido  SET id_robot='$id_robot', id_mesa='$id_mesa' , total = '$total' WHERE id_pedido='$id_pedido'";
+        $query = "UPDATE pedido  SET idmesa='$idmesa', idrobot='$idrobot' , total = '$total', fecha='$fecha' WHERE idpedido='$idpedido'";
 
 
         $result = $mysql->query($query);

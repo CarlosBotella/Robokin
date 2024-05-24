@@ -6,9 +6,9 @@
     {
         require_once("db.php");
 
-        $nombre = $_GET['nombre'];
+        $idmesa = $_GET['idmesa'];
 
-        $query = "SELECT * FROM mesa WHERE nombre = '$nombre'";
+        $query = "SELECT * FROM mesa WHERE idmesa = '$idmesa'";
 
         $result = $mysql->query($query);
         

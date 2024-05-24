@@ -44,7 +44,8 @@ h2 {
 
 input[type="text"],
 input[type="password"],
-input[type="submit"] {
+input[type="submit"],
+input[type ="button"] {
     width: 100%;
     padding: 15px;
     margin-top: 10px;
@@ -59,7 +60,7 @@ label{
     color: #ffffff;
 }
 
-input[type="submit"] {
+input[type="submit"],input[type ="button"] {
     padding: 8px 20px;
     outline: none;
     border-radius: 7px;
@@ -77,6 +78,11 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #333;
 }
+
+input[type="button"]:hover {
+    background-color: #333;
+}
+
 
 #backButton {
     width: 100%; /* Ancho igual al 100% del contenedor */
