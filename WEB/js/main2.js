@@ -88,7 +88,7 @@ addCart.forEach(el => {
         let img = makeElement('img', 1);
         let small = makeElement('small', 1);
         let textSmall = document.createTextNode('1');
-        let removeText = document.createTextNode('delete');
+        let removeText = document.createTextNode('eliminar');
 
         // Add Class Names
         const divOrder = addClassElement(parentDiv[0], 'order-item');

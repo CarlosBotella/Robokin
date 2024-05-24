@@ -83,8 +83,28 @@ input[type="button"]:hover {
     background-color: #333;
 }
 
+#btnGris {
+    width: 100%;
+    padding: 8px 20px;
+    outline: none;
+    border-radius: 7px;
+    border-color: #E35843;
+    border-width: 3px;
+    cursor: pointer;
+    font-size: 17px;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    font-weight: 600;
+    background-color: transparent;
+    color: #E35843;
+}
 
-#backButton {
+#btnGris:hover {
+    background-color: #333;
+}
+
+
+#btnNaranja {
     width: 100%; /* Ancho igual al 100% del contenedor */
     padding: 8px 20px;
     font-size: 16px;
@@ -99,7 +119,7 @@ input[type="button"]:hover {
     margin-top: 10px; /* Margen superior para separar del formulario */
 }
 
-#backButton:hover {
+#btnNaranja:hover {
     background-color: #333;
 }
 
