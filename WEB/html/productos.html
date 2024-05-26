@@ -24,10 +24,10 @@
         <!-- Left Side Navbar -->
         <nav class="side-nav">
             <ul class="nav-links">
-                <li><a href="#" class="nav-item active" data-target="burger"><i
-                            class="fas fa-hamburger" style="font-size:24px;margin-bottom:3px;"></i>Comida</a></li>
-                <li><a href="#" class="nav-item" data-target="drink" ><i
-                            class="fas fa-beer" style="font-size:24px;margin-bottom:3px;"></i>Bebidas</a></li>
+                <li><a href="#" class="nav-item active" data-target="burger"><i class="fas fa-hamburger"
+                            style="font-size:24px;margin-bottom:3px;"></i>Comida</a></li>
+                <li><a href="#" class="nav-item" data-target="drink"><i class="fas fa-beer"
+                            style="font-size:24px;margin-bottom:3px;"></i>Bebidas</a></li>
             </ul>
         </nav>
         <!-- End Left Side Navbar -->
@@ -40,11 +40,13 @@
                     <h2>Robokin</h2>
                 </div>
                 <div class="search-bar">
-                    <input type="text" id="search-input" name="menu" placeholder="Buscar en menú...">
+                    <input type="text" id="search-input" name="menu" placeholder="Search menu..">
                     <button type="button" id="search-button"><i class="fas fa-search"></i></button>
                 </div>
                 <div class="usr-toggle">
                     <ul class="nav-links header">
+                        <li><a href="#" class="nav-item"><i class="fas fa-list-ul"></i></a></li>
+                        <li><a href="#" class="nav-item"><i class="fas fa-cog"></i></a></li>
                         <li><a href="#" class="nav-item"><i class="fas fa-user"></i></a></li>
                     </ul>
                 </div>
@@ -95,12 +97,13 @@
                         </div>
                         <div class="checkout-detail" id="total">
                             <h3>Total</h3>
-                            <h3>€0</h3>
+                            <h3 id="total2">€0</h3>
                         </div>
                     </div>
                     <div class="checkout-detail">
+                        <!-- TODO: Cambiar botones para que sean útiles -->
                         <button type="button" class="btn-md outline">hold order</button>
-                        <button type="button" class="btn-md fill">checkout</button>
+                        <button type="button" id="pagar" class="btn-md fill" onclick="pagar()">Pagar</button>
                     </div>
                 </div>
             </div>
@@ -111,19 +114,38 @@
     <script src="../js/icons/all.js"></script>
     <script src="../js/server.js"></script>
     <script src="../js/listaproductos2.js"></script>
+    <script src="../js/pedido.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        // Función para obtener parámetros de la URL
+        function getParameterByName(name) {
+            let url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            let regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+
+        // Obtener el número de mesa del parámetro de la URL
+        let numeroMesa = getParameterByName('nmesa');
+
+        // Mostrar el número de mesa en la página
+        document.getElementsByClassName('order-list')[0].children[0].innerHTML = 'Tu orden (Mesa ' + numeroMesa + ")";
+    </script>
     <script>
         window.addEventListener("load", function (event) {
-            
+
             let scriptEle = document.createElement("script");
             scriptEle.setAttribute("src", "../js/main2.js");
             document.body.appendChild(scriptEle)
             scriptEle.addEventListener("load", () => {
-               
-            });
 
+            });
             scriptEle.addEventListener("error", (ev) => {
-                
+
             });
         })
     </script>

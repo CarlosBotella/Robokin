@@ -28,10 +28,11 @@ async function pagar() {
                 // Guardar cada producto en el pedido con detalles
                 for (const producto of productosDetalles) {
                     await guardar_pedido_producto(idPedido, producto.id_producto, producto.cantidad);
-                    await actualizar_producto(producto.id_producto, producto.stock-producto.cantidad)
+                    await actualizar_producto(producto.id_producto, producto.stock-producto.cantidad);
 
                 }
                 alert("El pedido se realizo correctamente")
+                window.location.reload()
             }else
             {
                 alert("No se puede realizar el pedido porque no queda suficiente stock")

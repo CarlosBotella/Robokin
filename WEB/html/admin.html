@@ -20,19 +20,44 @@
 <div class="container">
     <div class="buttons">
         
-        <button id="btnGris" style="margin: 10px 0;">Ajustes</button>
-        <button id="btnNaranja" style="margin: 10px 0;">Control Manual</button>
-        <button id="btnGris" style="margin: 10px 0;">Lista de productos</button>
-        <button id="btnNaranja" style="margin: 10px 0;">Lista de mesas</button>
-        <button id="btnGris" style="margin: 10px 0;">Lista de robots</button>
-        <button id="btnNaranja" style="margin: 10px 0;">Lista de pedidos</button>
-        <button id="btnGris" style="margin: 10px 0;">Regresar</button>
+        <button id="btnGris" style="margin: 10px 0;" >Ajustes</button>
+        <button id="btnNaranja" style="margin: 10px 0;" onclick="manual()">Control Manual</button>
+        <button id="btnGris" style="margin: 10px 0;" onclick="productos()">Lista de productos</button>
+        <button id="btnNaranja" style="margin: 10px 0;" onclick="mesas()">Lista de mesas</button>
+        <button id="btnGris" style="margin: 10px 0;" onclick="robots()">Lista de robots</button>
+        <button id="btnNaranja" style="margin: 10px 0;" onclick="pedidos()">Lista de pedidos</button>
+        <button id="btnGris" style="margin: 10px 0;" onclick="volver()">Regresar</button>
     </div>
 </div>
 
 <script src="../js/scripts.js"></script>
 <script src="../js/server.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+<script>
+    function manual()
+    {
+        window.location.href = "control.html"
+    }
+    function productos()
+    {
+        window.location.href = "listaproductos.html"
+    }
+    function mesas()
+    {
+        window.location.href = "listamesas.html"
+    }
+    function robots()
+    {
+        window.location.href = "listarobots.html"
+    }
+    function pedidos()
+    {
+        window.location.href = "listapedidos.html"
+    }
+    function volver()
+    {
+        window.location.href = "option.html"
+    }
+</script>
 </body>
 </html>
