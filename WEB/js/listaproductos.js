@@ -69,14 +69,18 @@ function mostrarProductos() {
 
 
                 const acciones = document.createElement('td');
+
                 const editar = document.createElement('a');
                 editar.href = '#';
                 editar.textContent = 'Editar';
+                editar.addEventListener('click',() => editarProducto(producto.id_producto,producto.nombre))
 
                 const eliminar = document.createElement('a');
                 eliminar.href = '#';
                 eliminar.textContent = 'Eliminar';
-                //eliminar.addEventListener('click', () => eliminarUsuario(usuario.email));
+                eliminar.addEventListener('click', () => eliminarProducto(producto.id_producto,producto.nombre,producto.foto));
+                acciones.appendChild(editar)
+         
                 acciones.appendChild(eliminar);
 
                 fila.appendChild(acciones);
@@ -102,6 +106,23 @@ function filtrarProductos() {
             fila.style.display = 'none';
         }
     });
+}
+
+function eliminarProducto(id_producto, nombre, foto) {
+    if (confirm('¿Estás seguro de que quieres eliminar a ' + nombre + '?')) {
+        fetch(`../api/eliminarproducto.php?id_producto=${id_producto}&foto=${foto}`, { method: 'DELETE' })
+            .then(() => {
+                alert("El producto se eliminó correctamente");
+                mostrarProductos();
+            })
+            .catch(error => alert('Error: ' + "Error al eliminar el producto"), error);
+    }
+}
+
+function editarProducto(id_producto, nombre) {
+    if (confirm('¿Estás seguro de que quieres editar a ' + nombre + '?')) {
+        window.location.href = "../html/editarproducto.html?id_producto=" + id_producto;
+    }
 }
 
 

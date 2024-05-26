@@ -6,14 +6,14 @@
     {
         require_once("db.php");
 
-        $estado = $_POST['estado'];
         $pose_x = $_POST['pose_x'];
         $pose_y = $_POST['pose_y'];
         $pose_w = $_POST['pose_w'];
         $email = $_POST['email'];
+        $estado = $_POST['estado'];
 
 
-        $query = "INSERT INTO robot (estado, pose_x, pose_y, pose_w, email) VALUES ('$estado', '$pose_x', '$pose_y', '$pose_w', '$email')";
+        $query = "INSERT INTO robot ( pose_x, pose_y, pose_w, email, estado) VALUES ('$pose_x', '$pose_y', '$pose_w', '$email', '$estado')";
 
         $result = $mysql->query($query);
 

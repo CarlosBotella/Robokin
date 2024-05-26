@@ -12,34 +12,54 @@
 
     <div class="container">
         <h1>Número de Mesa</h1>
-        <form onsubmit="return confirmarMesa()">
-            <input type="text" id="mesa" name="mesa" placeholder="Número de mesa (1-10)" pattern="[1-9]|10" required>
-            <input type="submit" value="Confirmar">
+        <form>
+            <select id="mesa" name="mesa" required>
+                <option value="" disabled selected>Seleccione el número de mesa</option>
+
+            </select>
+            <button type="button" id="confirmarButton">Confirmar</button>
         </form>
         <button id="backButton" onclick="window.location.href='option.html';">Regresar</button>
     </div>
 
     <script>
-        function confirmarMesa() {
-            var mesa = document.getElementById("mesa").value;
+        document.addEventListener('DOMContentLoaded', function () {
+            const confirmarButton = document.getElementById('confirmarButton');
 
-            // Convertir el valor del campo a número
-            var numeroMesa = parseInt(mesa);
+            confirmarButton.addEventListener('click', function () {
+                var mesa = document.getElementById("mesa").value;
 
-            // Verificar si el número de mesa está entre 1 y 10
-            if (numeroMesa >= 1 && numeroMesa <= 10) {
-                // Redireccionar a productos.html
-                window.location.href = "productos.html";
-                return false; // Evitar el envío del formulario
-            } else {
-                // Mostrar un mensaje de error si el número de mesa está fuera del rango
-                alert("El número de mesa debe estar entre 1 y 10");
-                return false; // Evitar el envío del formulario
-            }
-        }
+                // Convertir el valor del campo a número
+                var numeroMesa = parseInt(mesa);
+
+                if (!isNaN(numeroMesa)) {
+                    // Redireccionar a productos.html
+                    window.location.href = "productos.html?nmesa=" + numeroMesa;
+                } else {
+                    // Manejo de error si el valor no es un número válido
+                    alert("Por favor, seleccione un número de mesa válido.");
+                }
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            fetch('../api/listamesas.php')
+                .then(response => response.json())
+                .then(data => {
+                    const selectMesa = document.getElementById('mesa');
+
+                    data.forEach(mesa => {
+                        const option = document.createElement('option');
+                        option.value = mesa.id_mesa;
+                        option.textContent = `Mesa ${mesa.id_mesa}`;
+                        selectMesa.appendChild(option);
+                    });
+                })
+                .catch(error => console.error('Hubo un error:', error));
+        })
     </script>
 
-    <script src="../js/scripts.js"></script>
     <script src="../js/server.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </body>

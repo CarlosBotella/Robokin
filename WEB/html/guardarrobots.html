@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="comprobarsesion2()">
+    <div class="container">
+        <!-- Botón para regresar -->
+        <div class="logo"></div> <!-- Logo -->
+        <h1>AÑADIR ROBOT</h1>
+
+        <form>
+            <label for="pose_x">Pose_x:</label>
+            <input type="text" id="pose_x" name="pose_x" required>
+            <label for="pose_y">Pose_y:</label>
+            <input type="text" id="pose_y" name="pose_y" required>
+            <label for="pose_w">Pose_w:</label>
+            <input type="text" id="pose_w" name="pose_w" required>
+            <input type="button" value="Guardar robot" onclick="guardar_robot()">
+        </form>
+        <script src="../js/server.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </div>
+</body>
+</html>

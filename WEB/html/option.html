@@ -32,11 +32,33 @@
                 </a>
             </div>
         </div>
-        <button id="btnNaranja" href = "../api/cerrarsesion.php">Cerrar sesión</button>
+        <button id="btnNaranja" onclick="CerrarSesion()">Cerrar sesión</button>
     </div>
 
 <script src="../js/server.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    function CerrarSesion() {
+        fetch('../api/cerrarsesion.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                // Redirigir a la página de inicio de sesión o de inicio
+                window.location.href = "../html/login.html"; // Ajusta esto según tu estructura de directorios
+            } else {
+                alert('Error al cerrar la sesión.');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Error al cerrar la sesión.');
+        });
+    }
+</script>
 
 </body>
 </html>

@@ -7,15 +7,10 @@
     if($_SERVER['REQUEST_METHOD'] == 'POST')
     {
         require_once("db.php");
-        $nombre = $_POST['nombre'];
-        $pose_x = $_POST['pose_x'];
-        $pose_y = $_POST['pose_y'];
-        $pose_w = $_POST['pose_w'];
         $stock = $_POST['stock'];
-        $precio = $_POST['precio'];
-        $idproducto = $_POST['idproducto'];
+        $id_producto = $_POST['id_producto'];
 
-        $query = "UPDATE producto  SET nombre='$nombre', pose_x='$pose_x' , pose_y = '$pose_y', pose_w = '$pose_w', stock = '$stock', precio = '$precio' WHERE idproducto='$idproducto'";
+        $query = "UPDATE producto  SET stock = '$stock' WHERE id_producto='$id_producto'";
 
 
         $result = $mysql->query($query);

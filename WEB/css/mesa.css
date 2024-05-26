@@ -27,7 +27,8 @@ h1 {
 }
 
 input[type="text"],
-input[type="password"] {
+input[type="password"],
+select {
     width: 100%;
     padding: 15px;
     margin-top: 10px;

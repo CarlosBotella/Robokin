@@ -6,9 +6,9 @@
     {
         require_once("db.php");
 
-        $idpedido = $_GET['idpedido'];
+        $id_pedido = $_GET['id_pedido'];
 
-        $query = "SELECT * FROM pedido WHERE idpedido = '$idpedido'";
+        $query = "SELECT * FROM pedido WHERE id_pedido = '$id_pedido'";
 
         $result = $mysql->query($query);
         

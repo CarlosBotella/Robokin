@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="comprobarsesion2()">
+    <h2 onload="listapedidos()">Administración de pedidos</h2>
+    <div id="listaPedidos">
+        <input id="buscador" type="text" class="form-control mb-2" placeholder="Buscar por nombre o tipo"
+            oninput="filtrarPedidos()">
+        <table id="tablaPedidos" class="table table-striped">
+            <thead>
+                <tr>
+                    <th id="numero">Numero</th>
+                    <th id="Mesa">Mesa</th>
+                    <th id="Robot">Robot</th>
+                    <th id="Total">Total</th>
+                    <th id="Fecha">Fecha</th>
+                    <th id="Producto">Producto/s</th>
+                </tr>
+            </thead>
+            <tbody id="listado-Pedidos">
+            </tbody>
+        </table>
+    </div>
+    </script>
+    <script src="../js/listapedidos.js"></script>
+    <script src="../js/server.js"></script>
+    <script src="../js/listapedidos.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+
+</html>

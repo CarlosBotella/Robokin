@@ -5,12 +5,13 @@
     if($_SERVER['REQUEST_METHOD'] == 'POST')
     {
         require_once("db.php");
-        $idpedido = $_POST['idpedido'];
-        $idproducto = $_POST['idproducto'];
+        $id_pedido = $_POST['id_pedido'];
+        $id_producto = $_POST['id_producto'];
+        $cantidad = $_POST['cantidad'];
 
 
 
-        $query = "INSERT INTO pedidoproducto (idpedido, idproducto) VALUES ('$idpedido', '$idproducto')";
+        $query = "INSERT INTO pedidoproducto (id_pedido, id_producto, cantidad) VALUES ('$id_pedido', '$id_producto', '$cantidad')";
 
         $result = $mysql->query($query);
 
