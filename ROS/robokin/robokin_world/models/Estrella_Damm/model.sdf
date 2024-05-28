@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="Estrella_Damm">
+    <static>true</static> <!-- Indica si el modelo es estático o no -->
+    <link name="link">
+      <pose>0 0 0 0 0 0</pose> <!-- Posición y orientación inicial del modelo -->
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://Estrella_Damm/meshes/Estrella_Damm.dae</uri> 
+            <scale>0.065 0.065 0.125</scale> 
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>
