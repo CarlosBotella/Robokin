@@ -132,36 +132,26 @@
         <uri>model://cafe_table</uri>
       </include>
     </model>
-    
-    <model name="Heineken">
-      <static>1</static>
-      <include>
-        <pose>-4.1 -0.1 0.0 0.0 0.0 0.0</pose>
-        <uri>model://Heineken</uri>
-      </include>
-    </model>
-    
-    <model name="Mahou_Clasica">
-      <static>1</static>
-      <include>
-        <pose>-4.1 0.3 0.0 0.0 0.0 0.0</pose>
-        <uri>model://Mahou_Clasica</uri>
-      </include>
-    </model>
-    
-    <model name="Estrella_Damm">
-      <static>1</static>
-      <include>
-        <pose>-4.1 0.7 0.0 0.0 0.0 0.0</pose>
-        <uri>model://Estrella_Damm</uri>
-      </include>
-    </model>
      
     <include>
       <pose>-2.0 -0.5 0.0 0.0 0.0 0.0</pose>
       <uri>model://turtlebot3_burger</uri>
     </include>
 
+    <include>
+        <uri>model://Estrella_Damm</uri>
+        <pose>-3.04 0.22 1.05 1.57 0.0 0.0</pose>
+    </include>
+
+    <include>
+        <uri>model://Heineken</uri>
+        <pose>-3.04 0.22 1.05 1.57 0.0 0.0</pose>
+    </include>
+
+    <include>
+        <uri>model://Mahou_Clasica</uri>
+        <pose>-3.04 0.22 1.05 1.57 0.0 0.0</pose>
+    </include>
      
 
   </world>
