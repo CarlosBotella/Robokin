@@ -38,12 +38,14 @@ function mostrarMesas() {
                 const acciones = document.createElement('td');
                 const editar = document.createElement('a');
                 editar.href = '#';
+                editar.classList.add('btn', 'btn-success'); 
                 editar.textContent = 'Editar';
 
                 const eliminar = document.createElement('a');
                 eliminar.href = '#';
+                eliminar.classList.add('btn', 'btn-danger');
                 eliminar.textContent = 'Eliminar';
-                //eliminar.addEventListener('click', () => eliminarUsuario(usuario.email));
+                eliminar.addEventListener('click', () => eliminarMesa(mesa.id_mesa));
                 acciones.appendChild(editar)
          
                 acciones.appendChild(eliminar);
@@ -70,6 +72,17 @@ function filtrarMesas() {
             fila.style.display = 'none';
         }
     });
+}
+
+function eliminarMesa(id_mesa) {
+    if (confirm('¿Estás seguro de que quieres eliminar a ' + id_mesa + '?')) {
+        fetch(`../api/eliminarmesa.php?id_mesa=${id_mesa}`, { method: 'DELETE' })
+            .then(() => {
+                alert("La mesa se eliminó correctamente");
+                mostrarMesas();
+            })
+            //.catch(error => alert('Error: ' + "Error al eliminar al mesa"), error);
+    }
 }
 
 

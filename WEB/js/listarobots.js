@@ -53,14 +53,16 @@ function mostrarRobots() {
                 const acciones = document.createElement('td');
                 const editar = document.createElement('a');
                 editar.href = '#';
+                editar.classList.add('btn', 'btn-success'); 
                 editar.textContent = 'Editar';
 
                 const eliminar = document.createElement('a');
                 eliminar.href = '#';
+                eliminar.classList.add('btn', 'btn-danger');
                 eliminar.textContent = 'Eliminar';
-                //eliminar.addEventListener('click', () => eliminarUsuario(usuario.email));
+
+                eliminar.addEventListener('click', () => eliminarRobot(robot.id_robot));
                 acciones.appendChild(editar)
-         
                 acciones.appendChild(eliminar);
 
                 fila.appendChild(acciones);
@@ -122,6 +124,17 @@ function ordenarUsuariosPorEstado() {
 
     // Cambiar el estado de orden actual
     estadoOrdenActual = estadoOrdenActual === 'ascendente' ? 'descendente' : 'ascendente';
+}
+
+function eliminarRobot(id_robot) {
+    if (confirm('¿Estás seguro de que quieres eliminar a ' + id_robot + '?')) {
+        fetch(`../api/eliminarrobot.php?id_robot=${id_robot}`, { method: 'DELETE' })
+            .then(() => {
+                alert("El robot se eliminó correctamente");
+                mostrarRobots();
+            })
+            //.catch(error => alert('Error: ' + "Error al eliminar al mesa"), error);
+    }
 }
 
 

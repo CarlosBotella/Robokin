@@ -17,6 +17,64 @@
     <!-- Main CSS -->
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/icons/all.css">
+
+    <style>
+        /* Popup Styles */
+        .popup {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 100000;
+            /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Black w/ opacity */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 350px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .close-btn {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close-btn:hover,
+        .close-btn:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .popup-content input[type="text"] {
+            margin-bottom: 10px;
+            margin-top: 10px;
+            /* Ajusta este valor según tus preferencias */
+        }
+
+        .popup-content button {
+            margin-top: 10px;
+            /* Ajusta este valor según tus preferencias */
+        }
+    </style>
 </head>
 
 <body onload="comprobarsesion2()">
@@ -45,9 +103,7 @@
                 </div>
                 <div class="usr-toggle">
                     <ul class="nav-links header">
-                        <li><a href="#" class="nav-item"><i class="fas fa-list-ul"></i></a></li>
-                        <li><a href="#" class="nav-item"><i class="fas fa-cog"></i></a></li>
-                        <li><a href="#" class="nav-item"><i class="fas fa-user"></i></a></li>
+                        <li><a href="#" id="salir" class="nav-item"><i class="fas fa-user"></i></a></li>
                     </ul>
                 </div>
             </header>
@@ -110,6 +166,18 @@
             <!-- End Checkout Detail -->
         </div>
     </div>
+
+    <!-- Popup HTML -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" id="close-btn">&times;</span>
+            <h2>Introduce el codigo</h2>
+            <input type="text" id="admin-code" placeholder="Introduce el codigo">
+            <button id="cancel-btn" class="btn-md outline">Cancelar</button>
+            <button id="confirm-btn" class="btn-md fill">Confirmar</button>
+        </div>
+    </div>
+
     <!-- Optional JavaScript -->
     <script src="../js/icons/all.js"></script>
     <script src="../js/server.js"></script>
@@ -148,6 +216,41 @@
 
             });
         })
+    </script>
+    <script>
+        // Show popup when user icon is clicked
+        document.getElementById('salir').addEventListener('click', function () {
+            document.getElementById('popup').style.display = 'flex';
+        });
+
+        // Hide popup when close button or cancel button is clicked
+        document.getElementById('close-btn').addEventListener('click', function () {
+            document.getElementById('popup').style.display = 'none';
+        });
+
+        document.getElementById('cancel-btn').addEventListener('click', function () {
+            document.getElementById('popup').style.display = 'none';
+        });
+
+        // Hide popup when clicking outside of the popup content
+        window.addEventListener('click', function (event) {
+            let popup = document.getElementById('popup');
+            let popupContent = document.querySelector('.popup-content');
+            if (event.target === popup) {
+                popup.style.display = 'none';
+            }
+        });
+
+        // Confirm button logic
+        document.getElementById('confirm-btn').addEventListener('click', function () {
+            const code = document.getElementById('admin-code').value;
+            if (code === '123456789') {
+                window.location.href = 'admin.html';
+            } else {
+                alert('Codigo invalido');
+            }
+        });
+
     </script>
 
 </body>
