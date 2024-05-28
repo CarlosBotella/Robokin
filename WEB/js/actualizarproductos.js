@@ -68,4 +68,8 @@ function getParameterByName(name) {
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
+function volver()
+{
+    window.location.href="listaproductos.html"
+}
 mostrar_producto()

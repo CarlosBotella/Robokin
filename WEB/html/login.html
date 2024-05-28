@@ -31,14 +31,19 @@
             <input type="password" id="password" name="password" required>
             <input type="button" value="Iniciar Sesión" onclick="login()">
         </form>
-        <button id="btnNaranja">Regresar</button>
+        <button id="btnNaranja" onclick="regresar()">Regresar</button>
     </div>
 
 
     <script src="../js/scripts.js"></script>
     <script src="../js/server.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-</body>
+    <script>
+        function regresar()
+        {
+            window.location.href="inicio.html"
+        }
+    </script>
+</body> 
 
 </html>

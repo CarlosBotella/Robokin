@@ -72,11 +72,13 @@ function mostrarProductos() {
 
                 const editar = document.createElement('a');
                 editar.href = '#';
+                editar.classList.add('btn', 'btn-success'); 
                 editar.textContent = 'Editar';
                 editar.addEventListener('click',() => editarProducto(producto.id_producto,producto.nombre))
 
                 const eliminar = document.createElement('a');
                 eliminar.href = '#';
+                eliminar.classList.add('btn', 'btn-danger'); 
                 eliminar.textContent = 'Eliminar';
                 eliminar.addEventListener('click', () => eliminarProducto(producto.id_producto,producto.nombre,producto.foto));
                 acciones.appendChild(editar)

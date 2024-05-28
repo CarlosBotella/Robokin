@@ -32,7 +32,8 @@ async function pagar() {
 
                 }
                 alert("El pedido se realizo correctamente")
-                window.location.reload()
+                //window.location.reload()
+                $('.order-item a.remove').click();
             }else
             {
                 alert("No se puede realizar el pedido porque no queda suficiente stock")

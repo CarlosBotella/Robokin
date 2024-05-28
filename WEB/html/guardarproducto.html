@@ -1,16 +1,107 @@
 <!DOCTYPE html>
 <html lang="es">
+
+<style>
+    /* Tipografía */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e1e; /* MainBody color */
+    color: #f1f1f1;
+}
+
+/* Contenedor principal */
+.container {
+    width: 50%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #2c2f34; /* Fondo de la tabla */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Título */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #ffffff;
+}
+
+
+
+/* Formulario */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px 0;
+    font-weight: bold;
+    color: #f1f1f1;
+}
+
+input[type="text"],
+select,
+textarea,
+input[type="file"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+}
+
+input[type="button"] {
+    padding: 10px 15px;
+    margin-top: 10px;
+    font-size: 1em;
+    color: #ffffff;
+    background-color: #E35843; /* Botones y interactuadores */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 40px; /* Altura uniforme */
+}
+
+input[type="button"]:hover {
+    background-color: #d94c38;
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+/* Ajustes de responsive */
+@media (max-width: 768px) {
+    .container {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+    }
+}
+
+</style>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Añadir Producto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body onload="comprobarsesion2()">
     <div class="container">
-        <!-- Botón para regresar -->
-        <div class="logo"></div> <!-- Logo -->
-        <h1>AÑADIR PRODCUTO</h1>
-
+        <!-- Logo -->
+        <h1>AÑADIR PRODUCTO</h1>
         <form>
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" required>
@@ -23,9 +114,9 @@
                 <option value="comida">Comida</option>
                 <option value="bebida">Bebida</option>
             </select>
-            <label for="descripcion">descripcion:</label>
-            <textarea type="text" id="descripcion" name="descripcion" required></textarea>
-            <label for="foto">Foto (PNG):</label>
+            <label for="descripcion">Descripción:</label>
+            <textarea id="descripcion" name="descripcion" required></textarea>
+            <label for="foto">Foto (PNG o JPEG):</label>
             <input type="file" id="foto" name="foto" accept="image/png, image/jpeg" required>
             <input type="button" value="Guardar producto" onclick="guardar_producto()">
         </form>
