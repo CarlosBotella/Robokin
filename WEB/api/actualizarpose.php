@@ -21,7 +21,7 @@
 
         if($result == true)
         {
-            echo json_encode("La pose se actualizo coreectamente");
+            echo json_encode("La pose se actualizo correctamente");
         }else
         {
             echo json_encode("Error");

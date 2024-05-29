@@ -1,0 +1,8 @@
+# WayPoints.srv
+
+# Define un array de waypoints
+geometry_msgs/PoseStamped[] waypoints
+
+---
+# Indica si la solicitud fue exitosa o no
+bool success

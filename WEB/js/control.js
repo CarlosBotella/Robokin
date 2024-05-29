@@ -346,7 +346,7 @@ document.addEventListener('DOMContentLoaded', event => {
         if (color[0] != color[1] && color[1] != color[2]) {
             console.log("Coordinate x: " + coordenadas.relX,
                 "Coordinate y: " + coordenadas.relY)
-            follow_waypoints()
+            follow_waypoints(waypoints)
         }
     }
 
@@ -509,34 +509,29 @@ document.addEventListener('DOMContentLoaded', event => {
     // Assuming waypoints is already defined and contains the poses
 
 
-    function follow_waypoints() {
-        console.log("Enviando metas de seguimiento de waypoints");
+    function follow_waypoints(poses) {
+        data.service_busy = true
+        data.service_response = ''
 
-        if (waypoints.length === 0) {
-            console.log("No hay waypoints para enviar.");
-            return;
-        }
-
-        // Crear la instancia del servicio
+        //definimos los datos del servicio
         let service = new ROSLIB.Service({
             ros: data.ros,
-            name: '/follow_waypoints', // Nombre del servicio
-            serviceType: 'nav2_msgs/srv/FollowWaypoints'
-        });
+            name: '/follow_waypoints',
+            serviceType: 'robokin_custom_interface/srv/WayPoints'
+        })
 
-        // Crear la solicitud de servicio con los waypoints
         let request = new ROSLIB.ServiceRequest({
-            poses: waypoints
-        });
+            waypoints: poses
+        })
 
-        // Llamar al servicio
         service.callService(request, (result) => {
-            console.log('Resultado del servicio:', result);
+            data.service_busy = false
+            data.service_response = JSON.stringify(result)
         }, (error) => {
-            console.error('Error al llamar al servicio:', error);
-        });
+            data.service_busy = false
+            console.error(error)
+        })
     }
-
 
 
 
