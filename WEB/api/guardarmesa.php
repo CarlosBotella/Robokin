@@ -1,35 +1,27 @@
-<?php
+<?php	
+    //-------------------------------------------------------------------------------------------------------
+    //         
+    //-------------------------------------------------------------------------------------------------------
+    if($_SERVER['REQUEST_METHOD'] == 'POST')
+    {
+        require_once("db.php");
+        $pose_x = $_POST['pose_x'];
+        $pose_y = $_POST['pose_y'];
+        $pose_w = $_POST['pose_w'];
+        $email = $_POST['email'];
 
-function test_insert_mesa_script() {
-    $url = 'http://your-server-path/your-insert-mesa-script.php';
 
-    // Data to be sent via POST
-    $postData = array(
-        'pose_x' => '10',
-        'pose_y' => '20',
-        'pose_w' => '30',
-        'email' => 'test@example.com'
-    );
+        $query = "INSERT INTO mesa (pose_x, pose_y, pose_w, email) VALUES ('$pose_x', '$pose_y', '$pose_w', '$email')";
 
-    // Use cURL to send a POST request
-    $ch = curl_init($url);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_POST, true);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($postData));
+        $result = $mysql->query($query);
 
-    $response = curl_exec($ch);
-    curl_close($ch);
+        if($result == true)
+        {
+            echo json_encode("La mesa se creo coreectamente");
+        }else
+        {
+            echo json_encode("Error");
+        }
 
-    // Decode the JSON response
-    $response_data = json_decode($response, true);
-
-    // Assert that the response is as expected
-    assert($response_data === "La mesa se creó correctamente" || (isset($response_data['error']) && $response_data['error'] === 'Error al procesar la solicitud. Por favor, inténtelo de nuevo más tarde.'), "Response is not as expected.");
-
-    echo "All tests passed.\n";
-}
-
-// Execute the test
-test_insert_mesa_script();
-
-?>
+        $mysql->close();
+    }

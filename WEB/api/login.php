@@ -1,5 +1,9 @@
 <?php
 
+//-------------------------------------------------------------------------------------------------------
+//          email:text, contrasenya:text --> database()
+//-------------------------------------------------------------------------------------------------------
+
 session_start();
 
 $response = array('message' => '', 'error' => true);
@@ -11,28 +15,22 @@ if (isset($_SESSION['user_id'])) {
 
 require_once("database.php");
 
-try {
-    if (!empty($_POST['email']) && !empty($_POST['contrasenya'])) {
-        // Prepare the SQL statement
-        $records = $conn->prepare('SELECT email, contrasenya FROM usuario WHERE email = :email');
-        $records->bindParam(':email', $_POST['email']);
-        $records->execute();
-        $results = $records->fetch(PDO::FETCH_ASSOC);
+if (!empty($_POST['email']) && !empty($_POST['contrasenya'])) {
+    // Prepare the SQL statement
+    $records = $conn->prepare('SELECT email, contrasenya FROM usuario WHERE email = :email');
+    $records->bindParam(':email', $_POST['email']);
+    $records->execute();
+    $results = $records->fetch(PDO::FETCH_ASSOC);
 
-        if ($results && password_verify($_POST['contrasenya'], $results['contrasenya'])) {
-            // Set session variables and response
-            $_SESSION['user_id'] = $results['email'];
-            $response['error'] = false;
-        } else {
-            $response['message'] = "Uno o ambos datos no son correctos";
-        }
+    if ($results && password_verify($_POST['contrasenya'], $results['contrasenya'])) {
+        // Set session variables and response
+        $_SESSION['user_id'] = $results['email'];
+        $response['error'] = false;
     } else {
-        $response['message'] = "Por favor, complete ambos campos";
+        $response['message'] = "Uno o ambos datos no son correctos";
     }
-} catch (Exception $e) {
-    $response['message'] = "Error al procesar la solicitud: " . $e->getMessage();
-    // Log the exception message if needed
-    // error_log($e->getMessage());
+} else {
+    $response['message'] = "Por favor, complete ambos campos";
 }
 
 // Set the content type to application/json and return the response
