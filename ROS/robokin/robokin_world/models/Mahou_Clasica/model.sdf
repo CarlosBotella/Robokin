@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="Mahou_Clasica">
+    <static>true</static>
+    <link name="link">
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://Mahou_Clasica/meshes/Mahou_Clasica.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://Mahou_Clasica/meshes/Mahou_Clasica_texture_0001.jpg</uri>
+          </script>
+        </material>
+      </visual>
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <uri>model://Mahou_Clasica/meshes/Mahou_Clasica.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>

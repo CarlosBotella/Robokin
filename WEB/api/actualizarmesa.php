@@ -7,11 +7,13 @@
     if($_SERVER['REQUEST_METHOD'] == 'POST')
     {
         require_once("db.php");
-        $nombre = $_POST['nombre'];
+        $idmesa = $_POST['idmesa'];
         $pose_x = $_POST['pose_x'];
         $pose_y = $_POST['pose_y'];
+        $pose_w = $_POST['pose_w'];
+        $email = $_POST['email'];
 
-        $query = "UPDATE mesa  SET nombre='$nombre', pose_x='$pose_x' , pose_y = '$pose_y' WHERE nombre='$nombre'";
+        $query = "UPDATE mesa  SET email='$email', pose_x='$pose_x' , pose_y = '$pose_y', pose_w='$pose_w' WHERE idmesa='$idmesa'";
 
 
         $result = $mysql->query($query);

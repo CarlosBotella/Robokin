@@ -1,57 +1,49 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurante - Inicio de Sesión</title>
-    <link rel="stylesheet" href="../css/login.css">
+    <title>Login</title>
 
+    <!-- Etiquetas de preconexión para Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Hoja de estilos de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Otras etiquetas como hojas de estilos personalizadas, scripts, etc. -->
+    <link rel="stylesheet" href="../css/login.css">
 </head>
-<body>
 
-<div class="container">
-    <!-- Botón para regresar -->
-    <div class="logo"></div> <!-- Logo -->
-    <h1>Iniciar Sesión</h1>
-    <form onsubmit="return validarCredenciales()">
-        <label for="username">Usuario:</label>
-        <input type="text" id="username" name="username" required>
-        <label for="password">Contraseña:</label>
-        <input type="password" id="password" name="password" required>
-        <input type="submit" value="Iniciar Sesión">
-    </form>
-    <button id="backButton">Regresar</button>
-</div>
+<body onload="comprobarsesion()">
 
-<script>
-    // Limpiar historial de navegación
-    window.history.replaceState(null, "", "inicio.html");
+    <div class="container">
+        <div class="logo"></div> <!-- Logo -->
+        <h1>Iniciar Sesión</h1>
 
-    function validarCredenciales() {
-        var username = document.getElementById("username").value;
-        var password = document.getElementById("password").value;
-        
-        // Verificar las credenciales
-        if (username === "admin" && password === "admin") {
-            alert("Inicio de sesión exitoso");
-            window.location.href = "option.html"; // Redirigir a option.html
-            return false; // Evitar el envío del formulario
-        } else {
-            alert("Usuario o contraseña incorrectos");
-            return false; // Evitar el envío del formulario
+        <form>
+            <label for="username">Usuario:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required>
+            <input type="button" value="Iniciar Sesión" onclick="login()">
+        </form>
+        <button id="btnNaranja" onclick="regresar()">Regresar</button>
+    </div>
+
+
+    <script src="../js/scripts.js"></script>
+    <script src="../js/server.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function regresar()
+        {
+            window.location.href="inicio.html"
         }
-    }
+    </script>
+</body> 
 
-    // Función para redirigir a la página de inicio.html
-    document.getElementById("backButton").addEventListener("click", function() {
-        window.location.href = "inicio.html"; // Redirigir siempre a inicio.html
-    });
-</script>
-
-<script src="../js/scripts.js"></script>
-
-</body>
 </html>

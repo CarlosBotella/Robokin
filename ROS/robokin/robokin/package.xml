@@ -15,6 +15,11 @@
   <buildtool_depend>ament_cmake</buildtool_depend>
   <exec_depend>robokin_publisher</exec_depend>
   <exec_depend>robokin_world</exec_depend>
+  <exec_depend>robokin_nav_system</exec_depend>
+  <exec_depend>robokin_capture_image</exec_depend>
+  <exec_depend>robokin_custom_interface</exec_depend>
+  <exec_depend>robokin_ia</exec_depend>
+  
   <export>
     <build_type>ament_cmake</build_type>
   </export>

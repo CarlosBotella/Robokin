@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración de robots</title>
+
+    <link rel="stylesheet" href="../css/listarobots.css">
+</head>
+
+<body onload="comprobarsesion2()">
+    <div class="container">
+        <h1 onload="listarobots()">Administración de robots</h1>
+        <div class="search-container">
+            <input id="buscador" type="text" class="form-control mb-2" placeholder="Buscar por nombre o tipo"
+                oninput="filtrarRobots()">
+            <button id="anyadir" class="btn btn-primary">Añadir</button>  
+            <button id="regresar" class="btn btn-primary">Regresar</button>  
+        </div>
+        <div id="listaRobots">
+            <table id="tablaRobots" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th id="numero">Numero</th>
+                        <th id="Pose_x">Pose_x</th>
+                        <th id="Pose_y">Pose_y</th>
+                        <th id="Pose_w">Pose_w</th>
+                        <th id="Estado">Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="listado-Robots">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        const btnAnyadir = document.getElementById("anyadir");
+        btnAnyadir.addEventListener("click", function () {
+            window.location.href = "guardarrobots.html";
+        });
+        const btnregresar = document.getElementById("regresar");
+        btnregresar.addEventListener("click", function () {
+            window.location.href = "admin.html";
+        });
+    </script>
+    <script src="../js/listarobots.js"></script>
+    <script src="../js/server.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+
+</html>

@@ -27,4 +27,3 @@
         $result -> close();
         $mysql -> close();
     }
-       

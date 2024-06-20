@@ -6,9 +6,9 @@
     {
         require_once("db.php");
 
-        $id_robot = $_GET['id_robot'];
+        $idrobot = $_GET['idrobot'];
 
-        $query = "SELECT * FROM robot WHERE id_robot = '$id_robot'";
+        $query = "SELECT * FROM robot WHERE idrobot = '$idrobot'";
 
         $result = $mysql->query($query);
         

@@ -1,286 +1,258 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/productos.css">
-    <title>Productos</title>
+    <title>Comida y bebida</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Etiquetas de preconexión para Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Hoja de estilos de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/icons/all.css">
+
     <style>
-        /* Estilos adicionales */
-        .logo {
-            width: 120px;
-            height: 120px;
-            background-image: url("../img/robokin.jpg");
-            background-size: cover;
-            border-radius: 50%;
-            margin: 0 auto;
-        }
-        body {
-            font-family: "Roboto", sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: flex-start;
-        }
-        h1 {
+        /* Popup Styles */
+        .popup {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 100000;
+            /* Sit on top */
+            left: 0;
+            top: 0;
             width: 100%;
-            text-align: center;
-        }
-        .categorias {
-            margin-bottom: 20px;
-        }
-        .menu ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-        .menu ul li {
-            margin-bottom: 10px;
-            padding: 10px 20px;
-            font-size: 18px;
-            color: #000000; /* Negro */
-            cursor: pointer;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        .menu ul li:hover {
-            background-color: #f5f5f5;
-            color: lightgreen; 
-        }
-        .options {
-            display: flex;
-            flex-wrap: wrap;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Black w/ opacity */
             justify-content: center;
-            align-items: flex-start;
-            width: calc(70% - 20px);
-        }
-        .option {
-            width: 100%;
-            margin: 10px;
-            padding: 20px;
-            background-color: #ffffff;
-            border: 2px solid #000000; /* Negro */
-            border-radius: 5px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s;
-            display: none; /* Ocultar por defecto */
-        }
-        .option.active {
-            display: block;
-            order: 1;
-        }
-        .option:hover {
-            transform: translateY(-5px);
-        }
-        .option h3 {
-            font-size: 20px;
-            color: #000000; /* Negro */
-            margin-bottom: 10px;
-            text-align: center;
-        }
-        .option img {
-            width: 50%;
-            border-radius: 5px;
-            margin-top: 10px;
-            display: block; /* Asegura que la imagen se comporte como un bloque */
-            margin: 0 auto; /* Establece los márgenes automáticos para centrar la imagen horizontalmente */
-        }
-        .option p {
-            font-size: 16px;
-            color: #000000; 
-            text-align: center;
-        }
-        .unidades {
-            display: flex;
-            flex-direction: row;
             align-items: center;
-            justify-content: space-between;
-            margin-top: 10px;
-        }
-        .unidades button {
-            background-color: lightgreen; 
-            max-width: 40%;
-            max-height: fit-content;
-            color: black; 
-            margin: 20px 50px; /* Reduce el margen horizontal entre los botones a 50px */
-            border: 1px;
-            border-color: #000000;
-            border-radius: 5px;
-            padding: 5px 10px;
-            font-size: 16px;
-            flex: 1;    
-            cursor: pointer;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        .unidades button:hover {
-            background-color: #0a5002; /* verde oscuro */
-        }
-        .unidades1 {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-            margin-top: 10px;
-        }
-        .unidades1 button {
-            background-color: lightgreen; 
-            max-width: 40%;
-            max-height: fit-content;
-            color: black; 
-            margin: 20px 50px; /* Reduce el margen horizontal entre los botones a 50px */
-            border: 1px;
-            border-color: #000000;
-            border-radius: 5px;
-            padding: 5px 10px;
-            font-size: 16px;
-            flex: 1;    
-            cursor: pointer;
-            transition: background-color 0.3s, color 0.3s;
         }
 
-        
-        .unidades1 button:hover {
-            background-color: #0a5002; /* verde oscuro */
+        .popup-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 350px;
+            text-align: center;
+            border-radius: 10px;
         }
-        .unidades2 {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-            margin-top: 10px;
-        }
-        .unidades2 button {
-            background-color: lightgreen; 
-            max-width: 40%;
-            max-height: fit-content;
-            color: black; 
-            margin: 20px 50px; /* Reduce el margen horizontal entre los botones a 50px */
-            border: 1px;
-            border-color: #000000;
-            border-radius: 5px;
-            padding: 5px 10px;
-            font-size: 16px;
-            flex: 1;    
+
+        .close-btn {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
             cursor: pointer;
-            transition: background-color 0.3s, color 0.3s;
         }
-        .unidades2 button:hover {
-            background-color: #0a5002; /* verde oscuro */
+
+        .close-btn:hover,
+        .close-btn:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .popup-content input[type="text"] {
+            margin-bottom: 10px;
+            margin-top: 10px;
+            /* Ajusta este valor según tus preferencias */
+        }
+
+        .popup-content button {
+            margin-top: 10px;
+            /* Ajusta este valor según tus preferencias */
         }
     </style>
 </head>
-<body>
 
-<div class="container">
-    <div class="logo"></div>
-    <h1>Productos</h1>
-    
-    <div id="precioTotal"></div>
+<body onload="comprobarsesion2()">
+    <div class="container">
+        <!-- Left Side Navbar -->
+        <nav class="side-nav">
+            <ul class="nav-links">
+                <li><a href="#" class="nav-item active" data-target="burger"><i class="fas fa-hamburger"
+                            style="font-size:24px;margin-bottom:3px;"></i>Comida</a></li>
+                <li><a href="#" class="nav-item" data-target="drink"><i class="fas fa-beer"
+                            style="font-size:24px;margin-bottom:3px;"></i>Bebidas</a></li>
+            </ul>
+        </nav>
+        <!-- End Left Side Navbar -->
 
-    <button onclick="mostrarResumenPedido()">Pagar</button>
+        <!-- Right Body -->
+        <div class="main-body">
+            <!-- Header -->
+            <header class="header">
+                <div class="logo">
+                    <h2>Robokin</h2>
+                </div>
+                <div class="search-bar">
+                    <input type="text" id="search-input" name="menu" placeholder="Buscar producto...">
+                    <button type="button" id="search-button"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="usr-toggle">
+                    <ul class="nav-links header">
+                        <li><a href="#" id="salir" class="nav-item"><i class="fas fa-user"></i></a></li>
+                    </ul>
+                </div>
+            </header>
+            <!-- End Header -->
 
-    <!-- Agregamos un div oculto que contendrá el resumen del pedido y los botones de confirmar y cancelar -->
-    <div id="popupResumenPedido" class="popup">
-        <div id="resumenPedido"></div>
-        <button onclick="confirmarPedido()">Confirmar</button>
-        <button onclick="cancelarPedido()">Cancelar</button>
+            <!-- Main Menu -->
+            <div class="main-menu">
+                <div class="menu-page show-up" id="burger">
+                    <!-- Menu items -->
+                    <div class="menus" id="menus-container-burger">
+                    </div>
+                    <!-- End Menu Items -->
+                </div>
+                <div class="menu-page" id="drink">
+                    <!-- Menu items -->
+                    <div class="menus" id="menus-container-drink">
+                    </div>
+                    <!-- End Menu Items -->
+                </div>
+            </div>
+            <!-- End Main Menu -->
+
+            <!-- Checkout Detail -->
+            <div class="order">
+                <div class="order-list">
+                    <h3>Tu orden</h3>
+                    <hr>
+                    <div class="order-inner">
+                        <div class="order-null">
+                            <i class="fas fa-clipboard-list"></i>
+                            <p>Cesta vacía</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="checkout">
+                        <div class="checkout-detail" id="qty">
+                            <h5>0 Producto(s)</h5>
+                            <h5>cantidad: <span>0</span></h5>
+                        </div>
+                        <div class="checkout-detail" id="subtotal">
+                            <h5>Subtotal</h5>
+                            <h4>€0</h4>
+                        </div>
+                        <div class="checkout-detail" id="tax" data-tax="5">
+                            <h5>IVA</h5>
+                            <h4>5%</h4>
+                        </div>
+                        <div class="checkout-detail" id="total">
+                            <h3>Total</h3>
+                            <h3 id="total2">€0</h3>
+                        </div>
+                    </div>
+                    <div class="checkout-detail">
+                        <!-- TODO: Cambiar botones para que sean útiles -->
+                        <button type="button" class="btn-md outline">Nueva orden</button>
+                        <button type="button" id="pagar" class="btn-md fill" onclick="pagar()">Pagar</button>
+                    </div>
+                </div>
+            </div>
+            <!-- End Checkout Detail -->
+        </div>
     </div>
 
-    <div class="menu">
-        <ul>
-            <li onclick="showOptions('Desayunos')">Desayunos</li>
-            <li onclick="showOptions('Aperitivos')">Aperitivos</li>
-            <li onclick="showOptions('Hamburguesas')">Hamburguesas</li>
-            <li onclick="showOptions('Bebidas')">Bebidas</li>
-            <li onclick="showOptions('Postres')">Postres</li>
-        </ul>
-    </div>
-    <div class="options">
-        <div class="option" id="Desayunos">
-            <h3>Desayunos</h3>
-            <img src="../img/cruasan_con_fokin_cafe.jpg" alt="Desayuno 1">
-            <p>Curasán y café con leche</p>
-            <img src="../img/desayuno_americano.jpg" alt="Desayuno 2">
-            <p>Desayuno americano (bacon, tortitas, huevos, pan, café y zumo)</p>
-            <img src="../img/desayuno_espanol.jpg" alt="Desayuno 3">
-            <p>Tostadas con tomate y café</p>
-        </div>
-        <div class="option" id="Aperitivos">
-            <h3>Aperitivos</h3>
-            <img src="../img/entrante1.jpg" alt="Entrante 1">
-            <p>Pulled Pork Fries</p>
-            <img src="../img/mac-and-cheese.jpg" alt="Entrante 2">
-            <p>Mac and Cheese</p>
-            <img src="../img/nachos.jpg" alt="Entrante 3">
-            <p>Robonachos</p>
-        </div>
-        <div class="option" id="Hamburguesas">
-            <h3>Hamburguesas</h3>
-            <img src="../img/hamburguesa1.jpg" alt="Hamburguesa 1">
-            <p>Roboburger</p>
-            <img src="../img/hamburguesa2.jpg" alt="Hamburguesa 2">
-            <p>Gandiburger</p>
-            <img src="../img/hamburguesa3jpg.jpg" alt="Hamburguesa 3">
-            <p>Ecoburger</p>
-        </div>  
-        <div class="option" id="Bebidas">
-            <h3>Bebidas</h3>
-            <img src="../img/mahou.jpg" alt="Cerveza 1">
-            <p>Mahou</p>
-            <div class="unidades" id="unidades">
-                <button onclick="quitarCesta('Mahou', 'Mahou')">-</button>
-                <div id="Mahou"></div>
-                <button onclick="anyadirCesta('Mahou', 'Mahou')">+</button>     
-            </div>
-            <div id="infoProducto"></div>
-            <img src="../img/cerveza2.jpg" alt="Cerveza 2">
-            <p>Estrella Damm</p>
-            <div class="unidades1" id="unidades1">
-                <button onclick="quitarCesta('EstrellaDamm', 'EstrellaDamm')">-</button>
-                <div id="EstrellaDamm"></div>
-                <button onclick="anyadirCesta('EstrellaDamm', 'EstrellaDamm')">+</button>
-                
-            </div>
-            <img src="../img/heineken.jpg" alt="Cerveza 3">
-            <p>Heineken</p>
-            <div class= "unidades2" id="unidades2">
-                <button onclick="quitarCesta('Heineken', 'Heineken')">-</button>
-                <div id="Heineken"></div>
-                <button onclick="anyadirCesta('Heineken', 'Heineken')">+</button>
-                
-            </div>
-        </div>
-        <div class="option" id="Postres">
-            <h3>Postres</h3>
-            <img src="../img/cheesecake.jpg" alt="Postre 1">
-            <p>Cheesecake</p>
-            <img src="../img/brazo-de-gitano.jpg" alt="Postre 2">
-            <p>Brazo de Gitano (by Pablo Perellón)</p>
-            <img src="../img/perfecbanana-split.jpg" alt="Postre 3">
-            <p>Banana Split</p>
+    <!-- Popup HTML -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" id="close-btn">&times;</span>
+            <h2>Introduce el codigo</h2>
+            <input type="text" id="admin-code" placeholder="Introduce el codigo">
+            <button id="cancel-btn" class="btn-md outline">Cancelar</button>
+            <button id="confirm-btn" class="btn-md fill">Confirmar</button>
         </div>
     </div>
-</div>
 
-<script>
-    function showOptions(category) {
-        var options = document.querySelectorAll('.option');
-        options.forEach(function(option) {
-            option.classList.remove('active');
+    <!-- Optional JavaScript -->
+    <script src="../js/icons/all.js"></script>
+    <script src="../js/server.js"></script>
+    <script src="../js/listaproductos2.js"></script>
+    <script src="../js/pedido.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        // Función para obtener parámetros de la URL
+        function getParameterByName(name) {
+            let url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            let regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+
+        // Obtener el número de mesa del parámetro de la URL
+        let numeroMesa = getParameterByName('nmesa');
+
+        // Mostrar el número de mesa en la página
+        document.getElementsByClassName('order-list')[0].children[0].innerHTML = 'Tu orden (Mesa ' + numeroMesa + ")";
+    </script>
+    <script>
+        window.addEventListener("load", function (event) {
+
+            let scriptEle = document.createElement("script");
+            scriptEle.setAttribute("src", "../js/main2.js");
+            document.body.appendChild(scriptEle)
+            scriptEle.addEventListener("load", () => {
+
+            });
+            scriptEle.addEventListener("error", (ev) => {
+
+            });
+        })
+    </script>
+    <script>
+        // Show popup when user icon is clicked
+        document.getElementById('salir').addEventListener('click', function () {
+            document.getElementById('popup').style.display = 'flex';
         });
-        var selectedOption = document.getElementById(category);
-        selectedOption.classList.add('active');
-    }
-</script>
 
-<script src="../js/productos.js"></script>
+        // Hide popup when close button or cancel button is clicked
+        document.getElementById('close-btn').addEventListener('click', function () {
+            document.getElementById('popup').style.display = 'none';
+        });
+
+        document.getElementById('cancel-btn').addEventListener('click', function () {
+            document.getElementById('popup').style.display = 'none';
+        });
+
+        // Hide popup when clicking outside of the popup content
+        window.addEventListener('click', function (event) {
+            let popup = document.getElementById('popup');
+            let popupContent = document.querySelector('.popup-content');
+            if (event.target === popup) {
+                popup.style.display = 'none';
+            }
+        });
+
+        // Confirm button logic
+        document.getElementById('confirm-btn').addEventListener('click', function () {
+            const code = document.getElementById('admin-code').value;
+            if (code === '123456789') {
+                window.location.href = 'admin.html';
+            } else {
+                alert('Codigo invalido');
+            }
+        });
+
+    </script>
 
 </body>
+
 </html>

@@ -1,22 +1,63 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin</title>
-    <link rel="stylesheet" href="../css/admin.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Admin</title>
+    
+        <!-- Etiquetas de preconexión para Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+        <!-- Hoja de estilos de Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    
+        <!-- Otras etiquetas como hojas de estilos personalizadas, scripts, etc. -->
+        <link rel="stylesheet" href="../css/login.css">
+    </head>
+<body onload="comprobarsesion2()">
 
 <div class="container">
     <div class="buttons">
-        <a href="control.html" class="button">Control Manual</a>
-        <a href="wip.html" class="button">Ajustes</a>
-        <a href="option.html" class="button">Regresar</a>
+        
+        <button id="btnGris" style="margin: 10px 0;" >Ajustes</button>
+        <button id="btnNaranja" style="margin: 10px 0;" onclick="manual()">Control Manual</button>
+        <button id="btnGris" style="margin: 10px 0;" onclick="productos()">Lista de productos</button>
+        <button id="btnNaranja" style="margin: 10px 0;" onclick="mesas()">Lista de mesas</button>
+        <button id="btnGris" style="margin: 10px 0;" onclick="robots()">Lista de robots</button>
+        <button id="btnNaranja" style="margin: 10px 0;" onclick="pedidos()">Lista de pedidos</button>
+        <button id="btnGris" style="margin: 10px 0;" onclick="volver()">Regresar</button>
     </div>
 </div>
 
 <script src="../js/scripts.js"></script>
-
+<script src="../js/server.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    function manual()
+    {
+        window.location.href = "control.html"
+    }
+    function productos()
+    {
+        window.location.href = "listaproductos.html"
+    }
+    function mesas()
+    {
+        window.location.href = "listamesas.html"
+    }
+    function robots()
+    {
+        window.location.href = "listarobots.html"
+    }
+    function pedidos()
+    {
+        window.location.href = "listapedidos.html"
+    }
+    function volver()
+    {
+        window.location.href = "option.html"
+    }
+</script>
 </body>
 </html>

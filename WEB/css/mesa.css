@@ -2,7 +2,7 @@ body {
     font-family: "Roboto", sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f7f7f7;
+    background-color: #1e1e1e;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,7 +14,7 @@ body {
     max-width: 400px;
     margin: 30px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: #3d4246;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     text-align: center;
@@ -23,10 +23,12 @@ body {
 h1 {
     font-size: 28px;
     margin-bottom: 20px;
+    color: #ffffff;
 }
 
 input[type="text"],
-input[type="password"] {
+input[type="password"],
+select {
     width: 100%;
     padding: 15px;
     margin-top: 10px;
@@ -44,18 +46,38 @@ input[type="password"]::placeholder {
 
 input[type="submit"],
 button {
+    padding: 8px 20px;
     width: 100%;
-    padding: 15px;
-    margin-top: 10px;
-    margin-bottom: 15px;
+    outline: none;
+    border-radius: 7px;
+    border-color: #E35843;
+    border-width: 3px;
+    cursor: pointer;
+    font-size: 17px;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    font-weight: 600;
+    background-color: transparent;
+    color: #E35843;
+}
+
+#backButton {
+    width: 100%; /* Ancho igual al 100% del contenedor */
+    padding: 8px 20px;
+    font-size: 16px;
+    background-color: #E35843; 
+    color: #3d4246;
+    transition: 0.1s ease;
     border: none;
     border-radius: 4px;
-    box-sizing: border-box;
-    font-size: 16px;
-    color: white;
+    font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s;
-    background-color: black;
+    margin-top: 10px; /* Margen superior para separar del formulario */
+}
+
+#backButton:hover {
+    background-color: #333;
 }
 
 input[type="submit"]:hover,
