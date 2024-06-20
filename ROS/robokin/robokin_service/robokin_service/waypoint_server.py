@@ -96,8 +96,8 @@ class WaypointService(Node):
             self.action_client.set_waypoints(pose3)
 
             poses = self.action_client.get_waypoints()"""
-            
-            self.action_client.send_goal(poses)
+
+            self.action_client.send_goal()
 
             response.success = True
         else:
