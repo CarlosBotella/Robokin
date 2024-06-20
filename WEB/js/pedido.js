@@ -48,6 +48,11 @@ async function pagar() {
     });
 }
 
+async function nuevaorden()
+{
+    $('.order-item a.remove').click();
+}
+
 function obtenerFechaFormateada() {
     const fecha = new Date();
     const year = fecha.getFullYear();
